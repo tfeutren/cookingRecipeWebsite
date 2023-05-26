@@ -1,3 +1,7 @@
+// JSON fil with all the recipes 
+
+import kouign from '../assets/kouign.jpg'
+import crepes from '../assets/crepes.jpg'
 
 export const recipeList = [
 	{
@@ -5,7 +9,7 @@ export const recipeList = [
 		difficulty: 2,
 		preparationTime: 30,
 		cookTime: 30,
-		picture: "../assets/kouign.jpg",
+		picture: kouign,
 		category: 'dessert',
 		type: "cake",
         description: "Le kouign-amann est un gâteau originaire de Douarnenez, dans le Finistère en Bretagne. Il est composé de pâte à pain et de sucre, de beurre salé et de sucre. Il est cuit au four. Il est de forme circulaire, avec un bord haut et un centre plat. Il est croustillant et fondant.",
@@ -20,7 +24,7 @@ export const recipeList = [
         difficulty: 1,
         preparationTime: 15,
         cookTime: 10,
-        picture: "../assets/crepes.jpg",
+        picture: crepes,
         category: 'dessert',
         type: "cake",
         description: "La crêpe est une galette de pâte mince, cuite sur les deux faces dans une poêle, ou sur une plaque chauffante, ou sur un bilig. La crêpe peut être garnie de multiples façons, salées ou sucrées. Elle est consommée à la Chandeleur, fête chrétienne qui se déroule le 2 février, ainsi que le jour du Mardi gras.",

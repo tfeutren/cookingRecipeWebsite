@@ -1,6 +1,6 @@
 // Composant Recette
 
-import '../styles/Recipe.css'
+import '../styles/RecipeItem.css'
 import { recipeList } from '../datas/recipeList'
 
 function RecipeItem({name, difficulty, preparationTime, cookTime, picture, category, type, description, ingredients, portions, season, uploadDate, instructions}) {
@@ -8,12 +8,15 @@ function RecipeItem({name, difficulty, preparationTime, cookTime, picture, categ
 		<div>
 			<ul>
 				{recipeList.map(({name, difficulty, preparationTime, cookTime, picture, category, type, description, ingredients, portions, season, uploadDate, instructions}) => (
-					<li key={name}>
+					<div key={name}>
 						<h2>{name}</h2>
 						<p>Dificulté : {difficulty}</p>
 						<p>Temps de préparation :{preparationTime}</p>
 						<p>Temps de cuisson :{cookTime}</p>
-					</li>
+						<a href={picture}>
+                			<img src={picture} className='lmj-render' />
+            			</a>
+					</div>
 				))}
 			</ul>
 		</div>

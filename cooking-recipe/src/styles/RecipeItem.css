@@ -1,0 +1,7 @@
+/* CSS pour le composant Recette */
+
+.lmj-render {
+  margin: 16px;
+  border: solid 2px black;
+  width: 300px;
+}
