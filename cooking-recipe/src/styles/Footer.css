@@ -1,0 +1,15 @@
+.footer {
+	color: rgb(255, 255, 255);
+	text-align: right;
+	padding: 15px;
+	border-top: solid 3px black;
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(122, 175, 111);
+	align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    text-align: center;
+}

@@ -5,7 +5,7 @@ import crepes from '../assets/crepes.jpg'
 
 export const recipeList = [
 	{
-		name: 'kouing amann',
+		name: 'Kouing-Amann',
 		difficulty: 2,
 		preparationTime: 30,
 		cookTime: 30,
@@ -20,7 +20,7 @@ export const recipeList = [
         instructions : ["Mélanger la farine, le sel, la levure et l'eau", "Laisser reposer 1h", "Etaler la pâte", "Ajouter le beurre et le sucre", "Rouler la pâte", "Laisser reposer 1h", "Cuire 30min à 180°C"]
     },
     {
-        name: 'crepes',
+        name: 'Crêpes',
         difficulty: 1,
         preparationTime: 15,
         cookTime: 10,

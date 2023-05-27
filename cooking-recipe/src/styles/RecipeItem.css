@@ -1,7 +1,33 @@
 /* CSS pour le composant Recette */
 
+h2 {
+  text-decoration: underline;
+}
+
 .lmj-render {
   margin: 16px;
   border: solid 2px black;
   width: 300px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-item {
+  margin: 200px 16px 200px 16px ;
+  border: solid 2px black;
+  width: calc(33.33% - 16px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  .recipe-item {
+    width: calc(50% - 16px);
+  }
 }

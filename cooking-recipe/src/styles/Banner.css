@@ -1,15 +1,23 @@
 .lmj-banner {
 	color: rgb(255, 255, 255);
-	text-align: center;
-	padding: 22px;
+	text-align: right;
+	padding: 15px;
 	border-bottom: solid 3px black;
 	display: flex;
 	flex-direction: row;
 	background-color: rgb(122, 175, 111);
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .lmj-title {
-	padding-left: 32px;
+	padding: 15px;
+}
+
+.lmj-link {
+	padding-right: 200px;
+	font-style: italic;
+	text-decoration: underline;
 }
 
 .lmj-logo {
