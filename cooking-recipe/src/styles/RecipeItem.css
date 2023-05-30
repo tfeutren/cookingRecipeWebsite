@@ -1,12 +1,13 @@
 /* CSS pour le composant Recette */
 
 h2 {
-  text-decoration: underline;
+  color: rgb(255, 158, 158);
 }
 
 .render {
   margin: 16px;
   border: solid 2px black;
+  border-radius: 10px;
   width: 300px;
 }
 
@@ -20,9 +21,10 @@ ul {
 }
 
 .recipe-item {
-  margin: 16px ;
-  border: solid 2px black;
-  width: calc(30% - 16px);
+  margin: 200px 16px 200px 16px ;
+  border: solid 2px rgb(28, 42, 57);
+  border-radius: 10px;
+  width: calc(33.33% - 16px);
   box-sizing: border-box;
 }
 
