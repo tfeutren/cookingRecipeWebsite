@@ -11,7 +11,6 @@ Projet from TC student at INSA Lyon, to learn how to use ReactJS framework, crea
 - Noa Tedghi
 
 ## Start project
--cd cooking-recipe
 - Install yarn : ```npm install yarn```
-- Launch the project : ```npm start```
+- Launch the project : ```cd cooking-recipe``` and ```npm start```
 
