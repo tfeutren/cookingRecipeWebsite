@@ -30,7 +30,7 @@ function RecipeItem({ category, difficulty, totalTimeMax, type, season }) {
 			  <p>Difficulté : {renderDifficulty(difficulty)}</p>
 			  <p>Temps Total : {preparationTime + cookTime} min</p>
 			  <a href={picture}>
-				<img src={picture} className='lmj-render' alt={name} />
+				<img src={picture} className='render' alt={name} />
 			  </a>
 			</div>
 		  ))}

@@ -1,7 +1,9 @@
 # Cooking recipe website with React App
 
+Projet from TC student at INSA Lyon, to learn how to use ReactJS framework, create a website to get recipe and more informations
+
 ## Contribution people
-- Thomas Feutren ( alias friteMan )
+- Thomas Feutren
 - Iman Toumi
 - Julie Noblet
 - Yueran Zhao
@@ -10,6 +12,6 @@
 
 ## Start project
 -cd cooking-recipe
--npm install yarn
--npm start
+- Install yarn : ```npm install yarn```
+- Launch the project : ```npm start```
 

@@ -1,4 +1,4 @@
-.lmj-banner {
+.banner {
 	color: rgb(255, 255, 255);
 	text-align: right;
 	padding: 15px;
@@ -10,17 +10,17 @@
 	align-items: center;
 }
 
-.lmj-title {
+.title {
 	padding: 15px;
 }
 
-.lmj-link {
-	padding-right: 200px;
+.link {
+	padding-right: 110px;
 	font-style: italic;
 	text-decoration: underline;
 }
 
-.lmj-logo {
+.logo {
 	height: 60px;
 	width: 60px;
 }

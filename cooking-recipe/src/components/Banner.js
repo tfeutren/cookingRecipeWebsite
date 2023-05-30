@@ -1,18 +1,43 @@
 import logo from '../assets/bzh.png'
 import '../styles/Banner.css'
+import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 function Banner({children}) {
     const title = 'Tu Cuisine'
     return (
-        <div className='lmj-banner'>
+        <div className='banner'>
             
-            <p className='lmj-link'>Entrées</p>
-            <p className='lmj-link'>Plats</p>
-            <p className='lmj-link'>Desserts</p>
-            <p className='lmj-link'>Frigo</p>            
-            <p className='lmj-link'>Aléatoire</p>
-            <img src={logo} alt='TuCuisine' className='lmj-logo' />
-            <h1 className='lmj-title'>{title}</h1>
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/entrees"><p className='link'>Entrées</p></Link>
+                </li></ul></nav>
+            </p>
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/plats"><p className='link'>Plats</p></Link>
+                </li></ul></nav>
+            </p>
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/desserts"><p className='link'>Desserts</p></Link>
+                </li></ul></nav>
+            </p>
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/frigo"><p className='link'>Frigo</p></Link>
+                </li></ul></nav>
+            </p>
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/aleatoire"><p className='link'>Aléatoire</p></Link>
+                </li></ul></nav>
+            </p>          
+            <p className='link'>
+                <nav><ul><li>
+                    <Link to="/"><img src={logo} alt='TuCuisine' className='logo' /></Link>
+                </li></ul></nav>
+            </p>
+            <h1 className='title'>{title}</h1>
             {children}
 
         </div>

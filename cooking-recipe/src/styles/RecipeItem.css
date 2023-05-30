@@ -4,7 +4,7 @@ h2 {
   text-decoration: underline;
 }
 
-.lmj-render {
+.render {
   margin: 16px;
   border: solid 2px black;
   width: 300px;
@@ -20,9 +20,9 @@ ul {
 }
 
 .recipe-item {
-  margin: 200px 16px 200px 16px ;
+  margin: 16px ;
   border: solid 2px black;
-  width: calc(33.33% - 16px);
+  width: calc(30% - 16px);
   box-sizing: border-box;
 }
 
