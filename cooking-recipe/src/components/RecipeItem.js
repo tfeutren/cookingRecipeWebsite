@@ -8,24 +8,35 @@ function renderDifficulty(difficulty) {
   return fireSymbol.repeat(difficulty);
 }
 
-function RecipeItem({ name, difficulty, preparationTime, cookTime, picture, category, type, description, ingredients, portions, season, uploadDate, instructions }) {
+function RecipeItem({ category, difficulty, totalTimeMax, type, season }) {
+	let filteredRecipes = recipeList;
+  
+	if (category || difficulty || totalTimeMax || type || season) {
+	  filteredRecipes = recipeList.filter(recipe =>
+		(!category || recipe.category === category) &&
+		(!difficulty || recipe.difficulty === difficulty) &&
+		(!totalTimeMax || totalTimeMax >= recipe.preparationTime + recipe.cookTime) &&
+		(!type || recipe.type === type) &&
+		(!season || recipe.season.includes(season))
+	  );
+	}
+  
 	return (
 	  <div>
 		<ul>
-		  {recipeList.map(({ name, difficulty, preparationTime, cookTime, picture, category, type, description, ingredients, portions, season, uploadDate, instructions }) => (
+		  {filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
 			<div className="recipe-item" key={name}>
 			  <h2>{name}</h2>
 			  <p>Difficulté : {renderDifficulty(difficulty)}</p>
-			  <p>Temps de préparation : {preparationTime} min</p>
-			  <p>Temps de cuisson : {cookTime} min</p>
+			  <p>Temps Total : {preparationTime + cookTime} min</p>
 			  <a href={picture}>
-				<img src={picture} className='lmj-render' />
+				<img src={picture} className='lmj-render' alt={name} />
 			  </a>
 			</div>
 		  ))}
 		</ul>
 	  </div>
-	)
+	);
   }
   
 
