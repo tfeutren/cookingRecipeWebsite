@@ -1,6 +1,7 @@
 import logo from '../assets/logo2-sans-fond.png'
 import '../styles/Banner.css'
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
+import RefreshableLink from './RefreshLink'
 
 function Banner({children}) {
     return (
@@ -28,7 +29,8 @@ function Banner({children}) {
             </p>
             <p className='link'>
                 <nav><ul><li>
-                    <Link to="/aleatoire"><p className='link'>Aléatoire</p></Link>
+                    <RefreshableLink to="/aleatoire"><p className='link'>Aléatoire</p></RefreshableLink>
+                    {/* <Link to="/aleatoire" onClick={() => console.log("Hello world")}><p className='link'>Aléatoire</p></Link> */}
                 </li></ul></nav>
             </p>          
             <p className='link'>
