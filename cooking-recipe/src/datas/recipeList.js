@@ -3,6 +3,7 @@
 import kouign from '../assets/kouign.jpg'
 import crepes from '../assets/crepes.jpg'
 import clafoutis_cerise from '../assets/clafoutis_cerise.png'
+import bigmac from '../assets/bigmac.jpg'
 
 export const recipeList = [
 	{
@@ -48,5 +49,20 @@ export const recipeList = [
         season: ["summer", "winter", "spring", "autumn"],
         uploadDate : "2023-26-05",
         instructions : ["Mélanger la farine, le sel, le sucre, les oeufs et le lait", "Laisser reposer 1h", "Cuire 1min de chaque côté"]
+    },
+    {
+        name: "Big Mac",
+        difficulty: 1,
+        preparationTime: 1,
+        cookTime: 1,
+        picture: bigmac,
+        category: "plat",
+        type: "burger",
+        description: "Le Big Mac est un hamburger vendu par l'entreprise américaine de restauration rapide McDonald's. Il a été créé en 1967 par le franchisé Jim Delligatti et est devenu un produit phare de la chaîne de restauration rapide.",
+        ingredients: [{name: "pain à burger", quantity: 2, unit: "tranches"}, {name: "steak haché", quantity: 2, unit: "steak"}, {name: "cornichon", quantity: 2, unit: "cornichons"}, {name: "oignon", quantity: 1, unit: "oignon"}, {name: "sauce big mac", quantity: 2, unit: "dose"}],
+        portions: 1,
+        season: ["summer", "winter", "spring", "autumn"],
+        uploadDate : "2023-26-05",
+        instructions : ["Faire cuire le steak haché", "Faire griller les tranches de pain", "Couper les cornichons et l'oignon en rondelles", "Assembler le burger"]
     }
 ]
