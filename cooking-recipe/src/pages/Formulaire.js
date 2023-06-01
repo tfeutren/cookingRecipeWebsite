@@ -44,25 +44,32 @@ function Formulaire() {
       <h1>Ajouter une recette</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Titre:
+          Titre : 
           <input type="text" value={titre} onChange={(e) => setTitre(e.target.value)} />
         </label>
         <br />
+        <br />
         <label>
-          Temps de préparation:
+          Temps de préparation : 
           <input type="text" value={tempsPreparation} onChange={(e) => setTempsPreparation(e.target.value)} />
         </label>
         <br />
+        <br />
         <label>
-          Budget:
+          Budget : 
           <input type="text" value={budget} onChange={(e) => setBudget(e.target.value)} />
         </label>
         <br />
+        <br />
+
         <label>
-          Ingrédients (séparés par des virgules):
+          Ingrédients (séparés par des virgules) : 
           <input type="text" value={ingredients} onChange={(e) => setIngredients(e.target.value)} />
         </label>
         <br />
+        <br />
+        <br />
+
         <button type="submit">Ajouter</button>
       </form>
     </div>
