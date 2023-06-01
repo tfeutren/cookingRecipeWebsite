@@ -6,7 +6,7 @@ import clafoutis_cerise from '../assets/clafoutis_cerise.png'
 
 export const recipeList = [
 	{
-		name: 'Kouing-Amann',
+		name: 'Kouign-Amann',
 		difficulty: 2,
 		preparationTime: 30,
 		cookTime: 30,
