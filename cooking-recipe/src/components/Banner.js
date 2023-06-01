@@ -1,9 +1,8 @@
-import logo from '../assets/bzh.png'
+import logo from '../assets/logo2-sans-fond.png'
 import '../styles/Banner.css'
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 function Banner({children}) {
-    const title = 'Tu Cuisine'
     return (
         <div className='banner'>
             

@@ -1,11 +1,10 @@
 .banner {
-	color: rgb(255, 255, 255);
+	color: rgb(28, 42, 57);
 	text-align: right;
 	padding: 15px;
-	border-bottom: solid 3px black;
 	display: flex;
 	flex-direction: row;
-	background-color: rgb(122, 175, 111);
+	background-color: rgb(255, 158, 158);
 	justify-content: flex-end;
 	align-items: center;
 }
@@ -20,7 +19,6 @@
 	text-decoration: underline;
 }
 
-.logo {
-	height: 60px;
-	width: 60px;
+.lmj-logo {
+	height: 100px;
 }
