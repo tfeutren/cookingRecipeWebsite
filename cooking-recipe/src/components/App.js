@@ -26,9 +26,9 @@ function App() {
           <Route path="/frigo" element={<FrigoPage />} />
           <Route path="/aleatoire" element={<AleatoirePage />} />
           <Route path="/recipe/:name" element={<RecipePage />} />
-          <Route path="/recipe/:name" element={<Formulaire />} />
+          <Route path="/formulaire" element={<Formulaire />} />
         </Routes>
-        
+
         <Footer />
       </Router>
     </div>
