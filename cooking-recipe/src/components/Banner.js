@@ -36,7 +36,6 @@ function Banner({children}) {
                     <Link to="/"><img src={logo} alt='TuCuisine' className='logo' /></Link>
                 </li></ul></nav>
             </p>
-            <h1 className='title'>{title}</h1>
             {children}
 
         </div>
