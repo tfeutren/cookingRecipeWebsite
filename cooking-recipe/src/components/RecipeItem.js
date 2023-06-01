@@ -26,14 +26,14 @@ function RecipeItem({ category, difficulty, totalTimeMax, type, season }) {
     <div>
       <ul>
         {filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
-          <div className="recipe-item" key={name}>
-              <h2>{name}</h2>
-              <p>Difficulté : {renderDifficulty(difficulty)}</p>
-              <p>Temps Total : {preparationTime + cookTime} min</p>
-			<Link to={`/recipe/${name}`}>  
-              <img src={picture} className="render" alt={name} />
-            </Link>
+          <Link to={`/recipe/${name}`} key={name} className="recipe-item">
+          <div>
+            <h2>{name}</h2>
+            <p>Difficulté : {renderDifficulty(difficulty)}</p>
+            <p>Temps Total : {preparationTime + cookTime} min</p>
+            <img src={picture} className="render" alt={name} />
           </div>
+        </Link>
         ))}
       </ul>
     </div>
