@@ -33,10 +33,15 @@ function Banner({children}) {
             </p>          
             <p className='link'>
                 <nav><ul><li>
+                    <Link to="/Formulaire"><p className='link'>Ajouter une recette</p></Link>
+                </li></ul></nav>
+            </p>   
+            <p className='link'>
+                <nav><ul><li>
                     <Link to="/"><img src={logo} alt='TuCuisines' className='logo' /></Link>
                 </li></ul></nav>
             </p>
-            {children}
+            {children} 
 
         </div>
     )

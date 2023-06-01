@@ -1,0 +1,14 @@
+.formulaire {
+	color: rgb(28, 42, 57);
+	text-align: right;
+	padding: 15px;
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(251, 211, 102);
+	align-items: center;
+    justify-content: center;
+}
+
+.formulaire-text {
+    text-align: center;
+}

@@ -9,6 +9,7 @@ import DessertsPage from '../pages/DessertsPage';
 import FrigoPage from '../pages/FrigoPages';
 import AleatoirePage from '../pages/AleatoirePage';
 import RecipePage from '../pages/RecipePage';
+import Formulaire from '../pages/Formulaire';
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
           <Route path="/frigo" element={<FrigoPage />} />
           <Route path="/aleatoire" element={<AleatoirePage />} />
           <Route path="/recipe/:name" element={<RecipePage />} />
+          <Route path="/recipe/:name" element={<Formulaire />} />
         </Routes>
-
-
+        
         <Footer />
       </Router>
     </div>
