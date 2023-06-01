@@ -33,7 +33,7 @@ function Banner({children}) {
             </p>          
             <p className='link'>
                 <nav><ul><li>
-                    <Link to="/"><img src={logo} alt='TuCuisine' className='logo' /></Link>
+                    <Link to="/"><img src={logo} alt='TuCuisines' className='logo' /></Link>
                 </li></ul></nav>
             </p>
             {children}

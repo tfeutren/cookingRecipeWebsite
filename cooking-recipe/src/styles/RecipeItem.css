@@ -8,7 +8,7 @@ h2 {
   margin: 16px;
   border: solid 2px black;
   border-radius: 10px;
-  width: 300px;
+  width: calc(65% - 16px);
 }
 
 ul {
@@ -21,7 +21,7 @@ ul {
 }
 
 .recipe-item {
-  margin: 200px 16px 200px 16px ;
+  margin: 50px 16px 50px 16px ;
   border: solid 2px rgb(28, 42, 57);
   border-radius: 10px;
   width: calc(33.33% - 16px);
