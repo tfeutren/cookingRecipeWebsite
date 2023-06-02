@@ -7,8 +7,10 @@ import EntreesPage from '../pages/EntreePage';
 import PlatsPage from '../pages/PlatsPage';
 import DessertsPage from '../pages/DessertsPage';
 import FrigoPage from '../pages/FrigoPages';
-import AleatoirePage from '../pages/AleatoirePage';
+import RandomPage from '../pages/RandomPage';
 import RecipePage from '../pages/RecipePage';
+import Formulaire from '../pages/Formulaire';
+import AccueilPage from '../pages/AccueilPage';
 
 function App() {
   return (
@@ -23,10 +25,11 @@ function App() {
           <Route path="/plats" element={<PlatsPage />} />
           <Route path="/desserts" element={<DessertsPage />} />
           <Route path="/frigo" element={<FrigoPage />} />
-          <Route path="/aleatoire" element={<AleatoirePage />} />
+          <Route path="/aleatoire" element={<RandomPage />} />
           <Route path="/recipe/:name" element={<RecipePage />} />
+          <Route path="/formulaire" element={<Formulaire />} />
+          <Route path="/accueil" element={<AccueilPage />} />
         </Routes>
-
 
         <Footer />
       </Router>
