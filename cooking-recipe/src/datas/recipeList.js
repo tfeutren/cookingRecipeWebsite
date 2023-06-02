@@ -4,6 +4,8 @@ import kouign from '../assets/kouign.jpg'
 import crepes from '../assets/crepes.jpg'
 import clafoutis_cerise from '../assets/clafoutis_cerise.png'
 import bigmac from '../assets/bigmac.jpg'
+import cake_sale from '../assets/cake_sale.jpg'
+import omelette from '../assets/omelette.jpg'
 
 export const recipeList = [
 	{
@@ -66,5 +68,35 @@ export const recipeList = [
         uploadDate : "2023-26-05",
         //proposition : SUPPRIMER TYPE, c'est inutile et compliqué à mettre en place.
         instructions : ["Faire cuire le steak haché", "Faire griller les tranches de pain", "Couper les cornichons et l'oignon en rondelles", "Assembler le burger"]
+    },
+    {
+        name: "Cake salé",
+        difficulty: 3,
+        preparationTime: 20,
+        cookTime: 45,
+        picture: cake_sale,
+        category: "entree",
+        type: "cake",
+        description: "Le cake salé est un gâteau salé, généralement de forme rectangulaire, composé d'ingrédients salés et sucrés. Il est souvent servi en apéritif ou en entrée.",
+        ingredients: [{name: "farine", quantity: 200, unit: "g"}, {name: "oeuf", quantity: 3, unit: "oeufs"}, {name: "lait", quantity: 10, unit: "cl"}, {name: "huile", quantity: 10, unit: "cl"}, {name: "levure", quantity: 1, unit: "sachet"}, {name: "sel", quantity: 1, unit: "pincée"}, {name: "poivre", quantity: 1, unit: "pincée"}, {name: "gruyère", quantity: 100, unit: "g"}, {name: "jambon", quantity: 100, unit: "g"}, {name: "olive", quantity: 100, unit: "g"}],
+        portions: 6,
+        season: ["summer", "winter", "spring", "autumn"],
+        uploadDate : "2023-26-05",
+        instructions : ["Mélanger la farine, le sel, la levure et l'eau", "Laisser reposer 1h", "Etaler la pâte", "Ajouter le beurre et le sucre", "Rouler la pâte", "Laisser reposer 1h", "Cuire 30min à 180°C"]
+    },
+    {
+        name: "Omelette jambon fromage",
+        difficulty: 1,
+        preparationTime: 5,
+        cookTime: 5,
+        picture: omelette,
+        category: "plat",
+        type: "omelette",
+        description: "L'omelette est un mets préparé à base d'œufs battus cuits avec de la matière grasse dans une poêle, une poêle à crêpes ou une poêle à omelette, ou encore une poêle à blinis. L'omelette est généralement servie en plat principal ou en entrée.",
+        ingredients: [{name: "oeuf", quantity: 2, unit: "oeufs"}, {name: "jambon", quantity: 1, unit: "tranche"}, {name: "fromage", quantity: 1, unit: "tranche"}, {name: "sel", quantity: 1, unit: "pincée"}, {name: "poivre", quantity: 1, unit: "pincée"}],
+        portions: 1,
+        season: ["summer", "winter", "spring", "autumn"],
+        uploadDate : "2023-26-05",
+        instructions : ["Battre les oeufs", "Ajouter le sel et le poivre", "Faire cuire l'omelette", "Ajouter le jambon et le fromage"]
     }
 ]

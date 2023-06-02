@@ -1,3 +1,28 @@
-.test {
+.recipePage {
+    margin-left: 250px;
+    margin-right: 250px;
+    padding: 30px;
+}
+
+.textRecipe {
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.render {
+    margin: 16px;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: calc(55% - 16px);
+
+}
+
+.error {
     color: red;
+    margin: 350px;
+    text-decoration: none;
 }

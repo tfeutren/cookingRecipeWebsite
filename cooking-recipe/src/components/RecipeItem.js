@@ -15,7 +15,7 @@ function RecipeItem({ category, difficulty, totalTimeMax, type, season }) {
     filteredRecipes = recipeList.filter(
       (recipe) =>
         (!category || recipe.category === category) &&
-        (!difficulty || recipe.difficulty === difficulty) &&
+        (!difficulty || recipe.difficulty <= difficulty) &&
         (!totalTimeMax || totalTimeMax >= recipe.preparationTime + recipe.cookTime) &&
         (!type || recipe.type === type) &&
         (!season || recipe.season.includes(season))
@@ -24,18 +24,22 @@ function RecipeItem({ category, difficulty, totalTimeMax, type, season }) {
 
   return (
     <div>
-      <ul>
-        {filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
-          <Link to={`/recipe/${name}`} key={name} className="recipe-item">
-          <div>
-            <h2>{name}</h2>
-            <p>Difficulté : {renderDifficulty(difficulty)}</p>
-            <p>Temps Total : {preparationTime + cookTime} min</p>
-            <img src={picture} className="render" alt={name} />
-          </div>
-        </Link>
-        ))}
-      </ul>
+      {filteredRecipes.length === 0 ? (
+        <h1 className='error'>Pas de recette correspondante !</h1>
+      ) : (
+        <ul>
+          {filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
+            <Link to={`/recipe/${name}`} key={name} className="recipe-item">
+              <div>
+                <h2>{name}</h2>
+                <p>Difficulté : {renderDifficulty(difficulty)}</p>
+                <p>Temps Total : {preparationTime + cookTime} min</p>
+                <img src={picture} className="render" alt={name} />
+              </div>
+            </Link>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
