@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-rout
 import Banner from './Banner';
 import RecipeItem from './RecipeItem';
 import Footer from './Footer';
+import LeSaviezVous from './LeSaviezVous';
 import EntreesPage from '../pages/EntreePage';
 import PlatsPage from '../pages/PlatsPage';
 import DessertsPage from '../pages/DessertsPage';
@@ -42,7 +43,7 @@ function App() {
 
         {/* Define the link page */}
         <Routes>
-          <Route path="/" element={[<Bienvenue /> ,<Filter applyFilters={applyFilters} />, <RecipeItem {...filters} />]} />
+          <Route path="/" element={[<Bienvenue /> ,<Filter applyFilters={applyFilters} />, <RecipeItem {...filters} />,<LeSaviezVous />]} />
           <Route path="/entrees" element={<EntreesPage />} />
           <Route path="/plats" element={<PlatsPage />} />
           <Route path="/desserts" element={<DessertsPage />} />
