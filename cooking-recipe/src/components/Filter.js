@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/FilterBienvenue.css';
+import { MealCategory } from '../utility';
 
 function Filter({ applyFilters }) {
   const [category, setCategory] = useState('');
@@ -28,9 +29,9 @@ function Filter({ applyFilters }) {
         Catégorie:
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">Selection</option>
-          <option value="entree">Entree</option>
-          <option value="plat">Plat</option>
-          <option value="dessert">Dessert</option>
+          <option value={MealCategory.entree}>Entree</option>
+          <option value={MealCategory.plat}>Plat</option>
+          <option value={MealCategory.dessert}>Dessert</option>
         </select>
       </label>
       <label>

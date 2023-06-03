@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MealCategory } from '../utility';
 
 function Formulaire() {
   const [name, setName] = useState('');
@@ -125,9 +126,9 @@ function Formulaire() {
           Catégorie{' '}
           <select value={category} onChange={handleChangeCategory}>
             <option value="">Sélectionnez une catégorie</option>
-            <option value="entree">Entrée</option>
-            <option value="plat">Plat</option>
-            <option value="dessert">Dessert</option>
+            <option value={MealCategory.entree}>Entrée</option>
+            <option value={MealCategory.plat}>Plat</option>
+            <option value={MealCategory.dessert}>Dessert</option>
           </select>
         </label>
         <br />

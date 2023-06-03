@@ -1,15 +1,9 @@
 import '../App.css';
-
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
-
 import Banner from './Banner';
-import RecipeItem from './RecipeItem';
 import Footer from './Footer';
 import LeSaviezVous from './LeSaviezVous';
-import EntreesPage from '../pages/EntreePage';
-import PlatsPage from '../pages/PlatsPage';
-import DessertsPage from '../pages/DessertsPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FrigoPage from '../pages/FrigoPages';
 import RandomPage from '../pages/RandomPage';
 import RecipePage from '../pages/RecipePage';
@@ -17,10 +11,13 @@ import Formulaire from '../pages/Formulaire';
 import AccueilPage from '../pages/AccueilPage';
 import Filter from './Filter';
 import Bienvenue from './Bienvenue';
+import GaleryPage from "../pages/GaleryPage";
+import { MealCategory } from "../utility"
+import RecipeItem from './RecipeItem';
 
 function App() {
 
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState();
 
   const applyFilters = (category, difficulty, totalTimeMax, type, season) => {
     const newFilters = {
@@ -39,14 +36,12 @@ function App() {
       <Router>
         <Banner />
 
-        
-
         {/* Define the link page */}
         <Routes>
           <Route path="/" element={[<Bienvenue /> ,<Filter applyFilters={applyFilters} />, <RecipeItem {...filters} />,<LeSaviezVous />]} />
-          <Route path="/entrees" element={<EntreesPage />} />
-          <Route path="/plats" element={<PlatsPage />} />
-          <Route path="/desserts" element={<DessertsPage />} />
+          <Route path="/entrees" element={<GaleryPage recipeFilter={r => r.category === MealCategory.entree} />} />
+          <Route path="/plats" element={<GaleryPage recipeFilter={r => r.category === MealCategory.plat} />} />
+          <Route path="/desserts" element={<GaleryPage recipeFilter={r => r.category === MealCategory.dessert} />} />
           <Route path="/frigo" element={<FrigoPage />} />
           <Route path="/aleatoire" element={<RandomPage />} />
           <Route path="/recipe/:name" element={<RecipePage />} />

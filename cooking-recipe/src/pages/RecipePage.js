@@ -28,9 +28,9 @@ function RecipePage() {
         <h2>Ingrédients :</h2>
         <p>J'arrive pas à le faire afficher !</p>
         <h2>instructions :</h2>
-      <div>
-       {recipe.instructions.map((instruction, index) => (<li key={index}>{instruction}</li>))}
-      </div>
+        <div>
+          {recipe.instructions.map((instruction, index) => (<li key={index}>{instruction}</li>))}
+        </div>
       </div>
     </div>
   );
