@@ -19,8 +19,9 @@ function App() {
 
   const [filters, setFilters] = useState();
 
-  const applyFilters = (category, difficulty, totalTimeMax, season) => {
+  const applyFilters = (name, category, difficulty, totalTimeMax, season) => {
     const newFilters = {
+      name,
       category,
       difficulty,
       totalTimeMax,

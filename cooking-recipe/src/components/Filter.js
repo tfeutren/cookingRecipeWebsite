@@ -3,16 +3,18 @@ import '../styles/FilterBienvenue.css';
 import { MealCategory } from '../utility';
 
 function Filter({ applyFilters }) {
+  const [name, setName] = useState('');
   const [category, setCategory] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [totalTimeMax, setTotalTimeMax] = useState('');
   const [season, setSeason] = useState('');
 
   const handleApplyFilters = () => {
-    applyFilters(category, difficulty, totalTimeMax, season);
+    applyFilters(name, category, difficulty, totalTimeMax, season);
   };
 
   const handleResetFilters = () => {
+    setName('');
     setCategory('');
     setDifficulty('');
     setTotalTimeMax('');
@@ -23,6 +25,14 @@ function Filter({ applyFilters }) {
   return (
     <div className='whole'>
       <h2>Filtrer</h2>
+      <label>
+        Recherche:
+        <input
+          type="string"
+          value={name}
+          onChange={(e) => setName(e.target.value.toLowerCase())}
+        />
+      </label>
       <label>
         Catégorie:
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
