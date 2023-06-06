@@ -8,12 +8,13 @@ function renderDifficulty(difficulty) {
   return fireSymbol.repeat(difficulty);
 }
 
-function RecipeItem({ category, difficulty, totalTimeMax, season }) {
+function RecipeItem({ name, category, difficulty, totalTimeMax, season }) {
   let filteredRecipes = recipeList;
 
-  if (category || difficulty || totalTimeMax || season) {
+  if (name || category || difficulty || totalTimeMax || season) {
     filteredRecipes = recipeList.filter(
       (recipe) =>
+        (!name || recipe.name.toLowerCase().includes(name)) &&
         (!category || recipe.category === category) &&
         (!difficulty || recipe.difficulty <= difficulty) &&
         (!totalTimeMax || totalTimeMax >= recipe.preparationTime + recipe.cookTime) &&
