@@ -1,7 +1,6 @@
 import logo from '../assets/logo2-sans-fond.png'
 import '../styles/Banner.css'
 import { Link } from 'react-router-dom';
-import SearchBar from "./SearchBar.js"
 
 function Banner({ children }) {
     const randomRecipeReload = (event) => {
@@ -19,7 +18,6 @@ function Banner({ children }) {
             <Link to="/frigo" className='link'>Frigo</Link>
             <Link to="/aleatoire" className='link' onClick={randomRecipeReload}>Aléatoire</Link>
             <Link to="/Formulaire" className='link'>Ajouter une recette</Link>
-            <SearchBar></SearchBar>
             <Link to="/"><img src={logo} alt='TuCuisines' className='logo' /></Link>
             {children}
         </div>
