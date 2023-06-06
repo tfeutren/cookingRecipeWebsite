@@ -19,7 +19,6 @@ function RecipePage() {
       <img src={recipe.picture} className="render" alt={name} />
       <div className='textRecipe'>
         <h2>Informations :</h2>
-        <p>Type : {recipe.type}</p>
         <p>Difficulté : {renderDifficulty(recipe.difficulty)}</p>
         <p>Temps de préparation : {recipe.preparationTime} min</p>
         <p>Temps de cuisson : {recipe.cookTime} min</p>

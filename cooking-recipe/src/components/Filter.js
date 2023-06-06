@@ -6,18 +6,16 @@ function Filter({ applyFilters }) {
   const [category, setCategory] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [totalTimeMax, setTotalTimeMax] = useState('');
-  const [type, setType] = useState('');
   const [season, setSeason] = useState('');
 
   const handleApplyFilters = () => {
-    applyFilters(category, difficulty, totalTimeMax, type, season);
+    applyFilters(category, difficulty, totalTimeMax, season);
   };
 
   const handleResetFilters = () => {
     setCategory('');
     setDifficulty('');
     setTotalTimeMax('');
-    setType('');
     setSeason('');
     applyFilters('', '', '', '', '');
   };
@@ -52,15 +50,6 @@ function Filter({ applyFilters }) {
           value={totalTimeMax}
           onChange={(e) => setTotalTimeMax(e.target.value)}
         />
-      </label>
-      <label>
-        Type:
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="">Selection</option>
-          <option value="cake">Cake</option>
-          <option value="burger">Burger</option>
-          <option value="omelette">Omelette</option>
-        </select>
       </label>
       <label>
         Saison:
