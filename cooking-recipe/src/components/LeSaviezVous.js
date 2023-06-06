@@ -17,9 +17,8 @@ function LeSaviezVous() {
   return (
     <div className='whole'>
       <h2>Le saviez-vous</h2>
-      <p>{question.question}</p>
-      <p>{question.answer}</p>
-      <button onClick={changeQuestion}>Change Question</button>
+      <p className='aligne-title'> <strong>{question.question} </strong>  </p>
+      <p className='aligne'>{question.answer}</p>
     </div>
   );
 }

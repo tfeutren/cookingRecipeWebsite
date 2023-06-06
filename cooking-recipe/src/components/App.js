@@ -24,6 +24,7 @@ function App() {
       category,
       difficulty,
       totalTimeMax,
+
       season
     };
 
