@@ -13,24 +13,11 @@ import Filter from './Filter';
 import Bienvenue from './Bienvenue';
 import GaleryPage from "../pages/GaleryPage";
 import { MealCategory } from "../utility"
-import RecipeItem from './RecipeItem';
+import RecipeGalery from './RecipeGalery';
 
 function App() {
 
   const [filters, setFilters] = useState();
-
-  const applyFilters = (name, category, difficulty, totalTimeMax, season) => {
-    const newFilters = {
-      name,
-      category,
-      difficulty,
-      totalTimeMax,
-
-      season
-    };
-
-    setFilters(newFilters);
-  };
 
   return (
     <div className="App">
@@ -39,7 +26,7 @@ function App() {
 
         {/* Define the link page */}
         <Routes>
-          <Route path="/" element={[<Bienvenue /> ,<Filter applyFilters={applyFilters} />, <RecipeItem {...filters} />,<LeSaviezVous />]} />
+          <Route path="/" element={[<Bienvenue /> ,<Filter applyFilters={setFilters} />, <RecipeGalery recipeFilter={filters} />,<LeSaviezVous />]} />
           <Route path="/entrees" element={<GaleryPage recipeFilter={r => r.category === MealCategory.entree} />} />
           <Route path="/plats" element={<GaleryPage recipeFilter={r => r.category === MealCategory.plat} />} />
           <Route path="/desserts" element={<GaleryPage recipeFilter={r => r.category === MealCategory.dessert} />} />
@@ -47,7 +34,7 @@ function App() {
           <Route path="/aleatoire" element={<RandomPage />} />
           <Route path="/recipe/:name" element={<RecipePage />} />
           <Route path="/formulaire" element={<Formulaire />} />
-          <Route path="/accueil" element={<AccueilPage />} />
+          {/* <Route path="/accueil" element={<AccueilPage />} /> */}
         </Routes>
 
         <Footer />

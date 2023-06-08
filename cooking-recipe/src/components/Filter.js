@@ -10,7 +10,13 @@ function Filter({ applyFilters }) {
   const [season, setSeason] = useState('');
 
   const handleApplyFilters = () => {
-    applyFilters(name, category, difficulty, totalTimeMax, season);
+    const filter = r => ((!name || r.name.toLowerCase().includes(name)) &&
+        (!category || r.category === category) &&
+        (!difficulty || r.difficulty <= difficulty) &&
+        (!totalTimeMax || totalTimeMax >= r.preparationTime + r.cookTime) &&
+        (!season || r.season.includes(season)));
+
+    applyFilters(() => filter);
   };
 
   const handleResetFilters = () => {
@@ -19,7 +25,7 @@ function Filter({ applyFilters }) {
     setDifficulty('');
     setTotalTimeMax('');
     setSeason('');
-    applyFilters('', '', '', '', '');
+    applyFilters(undefined)
   };
 
   return (
@@ -72,7 +78,7 @@ function Filter({ applyFilters }) {
         </select>
       </label>
       <button onClick={handleApplyFilters}>Appliquer</button>
-      <button onClick={handleResetFilters}>Rénitialiser</button>
+      <button onClick={handleResetFilters}>Réinitialiser</button>
     </div>
   );
 }

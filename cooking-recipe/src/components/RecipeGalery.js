@@ -9,16 +9,18 @@ function RecipeGalery({ recipeFilter }) {
   return (
     <div>
       <ul>
-        {filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
-            <Link to={`/recipe/${name}`} key={name} className="recipe-item">
-              <div>
-                <h2>{name}</h2>
-                <p>Difficulté : {renderDifficulty(difficulty)}</p>
-                <p>Temps Total : {preparationTime + cookTime} min</p>
-                <img src={picture} className="render" alt={name} />
-              </div>
-            </Link>
-          ))}
+        {filteredRecipes.length === 0 ? (
+          <h1 className='error'>Pas de recette correspondante !</h1>
+        ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
+          <Link to={`/recipe/${name}`} key={name} className="recipe-item">
+            <div>
+              <h2>{name}</h2>
+              <p>Difficulté : {renderDifficulty(difficulty)}</p>
+              <p>Temps Total : {preparationTime + cookTime} min</p>
+              <img src={picture} className="render" alt={name} />
+            </div>
+          </Link>
+        ))}
       </ul>
     </div>
   );
