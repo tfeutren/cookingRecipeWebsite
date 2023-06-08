@@ -5,10 +5,19 @@ import { renderDifficulty } from '../utility';
 
 const RecipeList = ({ searchIngredient }) => {
   // Filter recipes based on the specified ingredient
+  const removeAccents = (str) => {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  };
+  // normalize: decomposes accented characters into a combination of the base character and marks
+  // replace: takes a regular expression as the first argument, which matches any Unicode character in the range \u0300-\u036f
+  // g flag: perform a global search and replace
+
   const filteredRecipes = recipeList.filter(recipe => {
-    return recipe.ingredients.some(ingredient => ingredient.name.toLowerCase().includes(searchIngredient.toLowerCase()));
-    // some: method that tests whether at least one element in the array passes the provided condition
+    return recipe.ingredients.some(ingredient =>
+      removeAccents(ingredient.name.toLowerCase()).includes(removeAccents(searchIngredient.toLowerCase()))
+    );
   });
+  // some: method that tests whether at least one element in the array passes the provided condition
 
   return (
     <div>
