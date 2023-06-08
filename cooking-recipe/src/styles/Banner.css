@@ -10,10 +10,11 @@
 }
 
 .link {
-	padding-right: calc(10% - 16px);
+	padding-right: calc(7% - 16px);
 	font-style: bold;
 	color: rgb(28, 42, 57);
 	text-decoration: none;
+	align-items: center;
 }
 
 .logo {

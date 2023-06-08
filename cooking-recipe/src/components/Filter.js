@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/FilterBienvenue.css';
+import '../styles/Filter.css';
 import { MealCategory } from '../utility';
 
 function Filter({ applyFilters }) {

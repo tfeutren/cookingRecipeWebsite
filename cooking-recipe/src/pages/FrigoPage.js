@@ -21,17 +21,21 @@ const RecipeList = ({ searchIngredient }) => {
 
   return (
     <div>
-      {filteredRecipes.map(recipe => (
-        <Link to="/recipe/${recipe.name}" className="link">
-        <div>
-          <h2>{recipe.name}</h2>
-          <p>Difficulté : {renderDifficulty(recipe.difficulty)}</p>
-          <p>Temps Total : {recipe.preparationTime + recipe.cookTime} min</p>
-          <img src={recipe.picture} className="render" alt={recipe.name} />
-        </div>
+    <ul>
+      {filteredRecipes.length === 0 ? (
+        <h1 className='error'>Pas de recette correspondante !</h1>
+      ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
+        <Link to={`/recipe/${name}`} key={name} className="recipe-item">
+          <div>
+            <h2>{name}</h2>
+            <p>Difficulté : {renderDifficulty(difficulty)}</p>
+            <p>Temps Total : {preparationTime + cookTime} min</p>
+            <img src={picture} className="render" alt={name} />
+          </div>
         </Link>
       ))}
-    </div>
+    </ul>
+  </div>
   );
 };
 

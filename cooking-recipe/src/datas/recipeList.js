@@ -31,6 +31,7 @@ export const recipeList = [
         category: MealCategory.dessert,
         description: "La crêpe est une galette de pâte mince, cuite sur les deux faces dans une poêle, ou sur une plaque chauffante, ou sur un bilig. La crêpe peut être garnie de multiples façons, salées ou sucrées. Elle est consommée à la Chandeleur, fête chrétienne qui se déroule le 2 février, ainsi que le jour du Mardi gras.",
         ingredients: [ {name: "farine",quantity : 187.5 ,unit : "g"},{name: "sel",quantity : 1.5 ,unit : "pincées"},{name: "sucre en poudre",quantity : 37.5 ,unit : "g"}],
+        portions: 4,
         season: ["summer", "winter", "spring", "autumn"],
         uploadDate : "2023-26-05",
         instructions : ["Mélanger la farine, le sel, le sucre, les oeufs et le lait", "Laisser reposer 1h", "Cuire 1min de chaque côté"]
