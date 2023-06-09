@@ -1,12 +1,9 @@
 import React from 'react';
-import { recipeList } from '../datas/recipeList';
 import { useParams } from 'react-router-dom';
-import '../styles/RecipePage.css';
 
-function renderDifficulty(difficulty) {
-  const fireSymbol = '🔥';
-  return fireSymbol.repeat(difficulty);
-}
+import { recipeList } from '../datas/recipeList';
+import '../styles/RecipePage.css';
+import { renderDifficulty } from "../utility"
 
 function RecipePage() {
   const { name } = useParams();
@@ -30,6 +27,7 @@ function RecipePage() {
           <p>{recipe.description}</p>
 
           <h2>Ingrédients :</h2>
+          <p>Pour {recipe.portions} personnes : </p>
           <div className="table-container">
             <table>
               <thead>
@@ -51,7 +49,7 @@ function RecipePage() {
             </table>
           </div>
 
-          <h2>instructions :</h2>
+          <h2>Instructions :</h2>
           <div>
             {recipe.instructions.map((instruction, index) => (<li key={index}>{instruction}</li>))}
           </div>
