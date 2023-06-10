@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { recipeList } from '../datas/recipeList';
 import { Link } from 'react-router-dom';
 import { renderDifficulty } from '../utility';
+import Filter_frigo from '../components/Filter_frigo';
 
 const RecipeList = ({ searchIngredient }) => {
   // Filter recipes based on the specified ingredient
@@ -21,6 +22,7 @@ const RecipeList = ({ searchIngredient }) => {
 
   return (
     <div>
+    <Filter_frigo />
     <ul>
       {filteredRecipes.length === 0 ? (
         <h1 className='error'>Pas de recette correspondante !</h1>
