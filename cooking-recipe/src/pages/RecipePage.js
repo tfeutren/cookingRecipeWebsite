@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { recipeList } from '../datas/recipeList';
@@ -9,6 +9,15 @@ function RecipePage() {
   const { name } = useParams();
   const recipe = recipeList.find((recipe) => recipe.name === name);
 
+  const [count, setCount] = useState(recipe.portions);
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+  const handleDecrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
 
   return (
     <div className='recipePage'>
@@ -27,7 +36,9 @@ function RecipePage() {
           <p>{recipe.description}</p>
 
           <h2>Ingrédients :</h2>
-          <p>Pour {recipe.portions} personnes : </p>
+          <p>Pour {count} personnes : </p>
+          <button onClick={handleDecrement}>-</button>
+          <button onClick={handleIncrement}>+</button>
           <div className="table-container">
             <table>
               <thead>
@@ -41,7 +52,7 @@ function RecipePage() {
                 {recipe.ingredients.map((ingredient, index) => (
                   <tr key={index}>
                     <td>{ingredient.name}</td>
-                    <td>{ingredient.quantity}</td>
+                    <td>{(ingredient.quantity/recipe.portions*count % 1 === 0) ? (ingredient.quantity/recipe.portions*count) : (ingredient.quantity/recipe.portions*count).toFixed(1)}</td>
                     <td>{ingredient.unit}</td>
                   </tr>
                 ))}
