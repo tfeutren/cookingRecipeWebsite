@@ -51,10 +51,6 @@ const FrigoPage = () => {
   return (
     <div>
       <h1>Voici la page Frigo !</h1>
-        <label>
-          Nom :
-          <input type="text" value={ingredient} onChange={handleInputChange} />
-        </label>
         
       <RecipeList searchIngredient={ingredient} />
     </div>
