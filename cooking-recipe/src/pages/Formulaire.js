@@ -191,7 +191,7 @@ function Formulaire() {
         {ingredients.map((ingredient, index) => (
           <div key={index}>
           <label>
-            Ingrédient
+            Ingrédient{' '}
             <input
               type="text"
               value={ingredient}
@@ -199,7 +199,7 @@ function Formulaire() {
             />
           </label>
           <label>
-            Quantité
+            Quantité{' '}
             <input
               type="float"
               value={quantity[index]}
@@ -207,7 +207,7 @@ function Formulaire() {
             />
           </label>
           <label>
-            Unité
+            Unité{' '}
             <input
               type="text"
               value={unit[index]}
@@ -226,7 +226,7 @@ function Formulaire() {
         {instruction.map((instruction, index) => (
           <div key={index}>
           <label>
-            Instructions : 
+            Instructions{' '}
             <input
               type="text"
               value={instruction}
