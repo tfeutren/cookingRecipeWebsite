@@ -79,7 +79,7 @@ function Formulaire() {
   };
 
   const handleChangeDifficulty = (e) => {
-    handleChangeDifficulty(e.target.value);
+    setDifficulty(e.target.value);
   }
   
   const handleChangeDescription = (e) => {
