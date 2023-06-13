@@ -98,10 +98,10 @@ function Filter({ applyFilters }) {
         </label>
         <br/>
         <br/>
-        <button onClick={handleApplyFilters}>Appliquer</button>
+        <button className = 'filter-button' onClick={handleApplyFilters}>Appliquer</button>
         <br/>
         <br/>
-        <button onClick={handleResetFilters}>Réinitialiser</button>
+        <button className = 'filter-button' onClick={handleResetFilters}>Réinitialiser</button>
       </div>
     </div>
   );
