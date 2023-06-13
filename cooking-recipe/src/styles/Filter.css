@@ -1,61 +1,123 @@
 .aligne {
-    text-align: left;
+  text-align: left;
 }
+
 .aligne-title {
-    text-align: left;
-    text-decoration: underline;
+  text-align: left;
+  text-decoration: underline;
 }
 
 .whole {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  label {
-    flex-basis: 23%;
-    box-sizing: border-box;
-    padding-right: 10px;
-  }
-  
-  select,
-  input[type='number'] {
-    flex-basis: 9%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 17px;
-  }
-  
-  button {
-    width: 48%;
-    padding: 10px;
-    margin: 4px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+label {
+  flex-basis: 23%;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+select,
+input[type='number'] {
+  flex-basis: 9%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+button {
+  width: 30%;
+  padding: 10px;
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  background-color: #000203;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #010a13;
+}
+
+.whole {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: transparent;
+  transition: left 0.3s ease;
+}
+
+.whole.visible {
+  background-color: rgb(78, 77, 75);
+  left: 0;
+}
+
+.toggle-filters {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.toggle-icon {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon::before,
+.toggle-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon::before {
+  top: -8px;
+}
+
+.toggle-icon::after {
+  bottom: -8px;
+}
+
+.whole.visible .toggle-icon {
+  transform: rotate(90deg);
+}
+
+.whole.visible .toggle-icon::before {
+  transform: rotate(45deg);
+}
+
+.whole.visible .toggle-icon::after {
+  transform: rotate(-45deg);
+}
+
+.filter-container {
+  padding: 20px;
+}

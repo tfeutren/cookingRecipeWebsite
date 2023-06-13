@@ -8,14 +8,10 @@ function getRandomQuestion() {
   }
 
 function LeSaviezVous() {
-    const [question, setQuestion] = useState(getRandomQuestion());
-
-  const changeQuestion = () => {
-    setQuestion(getRandomQuestion());
-  };
+    const [question] = useState(getRandomQuestion());
 
   return (
-    <div className='whole'>
+    <div className='LeSaviezVous'>
       <h2>Le saviez-vous</h2>
       <p className='aligne-title'> <strong>{question.question} </strong>  </p>
       <p className='aligne'>{question.answer}</p>
@@ -24,4 +20,3 @@ function LeSaviezVous() {
 }
 
 export default LeSaviezVous;
-
