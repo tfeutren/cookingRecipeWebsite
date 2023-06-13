@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MealCategory } from '../utility';
+import '../styles/Formulaire.css';
 
 function Formulaire() {
   const [name, setName] = useState('');
@@ -214,10 +215,11 @@ function Formulaire() {
               onChange={(e) => handleUnitChange(index, e.target.value)}
             />
           </label>
-          <button onClick={() => handleRemoveIngredient(index)}>Supprimer</button>
+          <button className="form-button" onClick={() => handleRemoveIngredient(index)}>Supprimer</button>
+
         </div>
         ))}
-        <button onClick={handleAddIngredient}>Ajouter un ingrédient</button>
+        <button className="form-button" onClick={handleAddIngredient}>Ajouter un ingrédient</button>
 
 
         <br/>
@@ -233,15 +235,15 @@ function Formulaire() {
               onChange={(e) => handleInstructionChange(index, e.target.value)}
             />
           </label>
-          <button onClick={() => handleRemoveInstruction(index)}>Supprimer</button>
+          <button className="form-button" onClick={() => handleRemoveInstruction(index)}>Supprimer</button>
         </div>
         ))}
-        <button onClick={handleAddInstruction}>Ajouter une instruction</button>
+        <button className="form-button" onClick={handleAddInstruction}>Ajouter une instruction</button>
         <br />
         <br />
         <br />
         <label>
-        <button type="submit">Ajouter</button>
+        <button className="form-button" type="submit">Ajouter</button>
       
         </label>
     </div>
