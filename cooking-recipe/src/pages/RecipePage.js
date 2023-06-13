@@ -37,8 +37,8 @@ function RecipePage() {
 
           <h2>Ingrédients :</h2>
           <p>Pour {count} personnes : </p>
-          <button onClick={handleDecrement}>-</button>
-          <button onClick={handleIncrement}>+</button>
+          <button className = 'recipe-button' onClick={handleDecrement}>-</button>
+          <button className = 'recipe-button' onClick={handleIncrement}>+</button>
           <div className="table-container">
             <table>
               <thead>

@@ -40,7 +40,7 @@ function Filter({ applyFilters }) {
         <div className="toggle-icon" />
       </div>
       <div className="filter-container">
-        <h2>Filtrer</h2>
+       <h2 className="aligne-title">Filtrer</h2>
         <label>
       
           Recherche{' '}
@@ -90,10 +90,10 @@ function Filter({ applyFilters }) {
           Saison{' '}
           <select value={season} onChange={(e) => setSeason(e.target.value)}>
             <option value="">Selection</option>
-            <option value="summer">Summer</option>
-            <option value="winter">Winter</option>
-            <option value="spring">Spring</option>
-            <option value="autumn">Autumn</option>
+            <option value="summer">Ete</option>
+            <option value="winter">Hiver</option>
+            <option value="spring">Printemps</option>
+            <option value="autumn">Automne</option>
           </select>
         </label>
         <br/>

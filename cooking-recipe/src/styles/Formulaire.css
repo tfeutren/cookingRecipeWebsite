@@ -1,36 +1,87 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 17px;
-  }
-  
-  .form-button {
-    width: 12%;
-    padding: 10px;
-    margin: 4px;
-    border: none;
-    border-radius: 3px;
-    background-color: #000203;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #010a13;
-  }
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+
+.form-button {
+  width: 12%;
+  padding: 10px;
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: rgb(251, 211, 102);
+}
+
+.label-category,
+.label-difficulty,
+.label-season {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+#category,
+#difficulty,
+#season {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  background-color: #6b6b6b;
+  color: rgb(255, 255, 255);
+  border: 1px solid #ccc;
+  width: fit-content;
+  padding: 10px;
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.label-name,
+.label-preparationTime,
+.label-cookTime,
+.label-portion,
+.label-description,
+.label-instruction {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+#name,
+#preparationTime,
+#cookTime,
+#portion,
+#description,
+#instruction{
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 4px;
+  background-color: transparent;
+  outline: none;
+  width: 50%;
+}
+
+

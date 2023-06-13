@@ -61,3 +61,25 @@ h2 {
   tbody tr:nth-child(even) {
     background-color: #f9f9f9;
   }
+
+  .recipe-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+  
+  .recipe-button {
+    width: 4%;
+    padding: 10px;
+    margin: 4px;
+    border: none;
+    border-radius: 3px;
+    background-color: #000203;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .recipe-button:hover {
+    background-color:rgb(251, 211, 102);
+  }
