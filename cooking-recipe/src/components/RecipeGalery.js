@@ -12,7 +12,7 @@ function RecipeGalery({ recipeFilter }) {
         {filteredRecipes.length === 0 ? (
           <h1 className='error'>Pas de recette correspondante !</h1>
         ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
-          <Link to={`/recette/${name}`} key={name} className="recipe-item">
+          <Link to={`/recipe/${name}`} key={name} className="recipe-item">
             <div>
               <h2>{name}</h2>
               <p>Difficulté : {renderDifficulty(difficulty)}</p>
