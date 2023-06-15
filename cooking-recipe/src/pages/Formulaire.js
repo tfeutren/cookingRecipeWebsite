@@ -90,7 +90,7 @@ function Formulaire() {
 
   const handleSubmit = () => {
     alert(
-      `Submitted ${name} ${preparationTime} ${preparationTime} ${cookTime} ${portion} ${difficulty} ${category} ${saison}`
+      "Votre recette a bien été enregistrée !"   
     );
 
     // Créer un objet recette avec les valeurs des champs
