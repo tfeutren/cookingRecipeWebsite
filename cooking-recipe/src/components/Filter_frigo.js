@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Filter.css';
+import '../styles/Filter_frigo.css';
 import { Link } from 'react-router-dom';
 import { renderDifficulty } from '../utility';
 import { recipeList } from '../datas/recipeList';

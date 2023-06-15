@@ -6,10 +6,12 @@
     text-decoration: underline;
 }
 
-.whole {
+.frigo {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    margin-top:50px;
+
   }
   
   h2 {
@@ -37,13 +39,13 @@
     border-radius: 3px;
   }
   
-  .button-container {
+  .frigo-button-container {
     display: flex;
     justify-content: space-between;
     margin-top: 17px;
   }
   
-  button {
+  .frigo-button {
     width: 48%;
     padding: 10px;
     margin: 4px;
@@ -55,7 +57,7 @@
     cursor: pointer;
   }
   
-  button:hover {
+  .frigo-button:hover {
     background-color: #0056b3;
   }
   
