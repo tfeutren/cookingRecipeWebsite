@@ -92,6 +92,7 @@ function Formulaire() {
       `Submitted ${name} ${preparationTime} ${preparationTime} ${cookTime} ${portion} ${difficulty} ${category} ${saison}`
     );
 
+
     // Créer un objet recette avec les valeurs des champs
     const recette = {
       name,
