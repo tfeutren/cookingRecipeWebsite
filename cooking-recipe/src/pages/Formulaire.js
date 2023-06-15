@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MealCategory } from '../utility';
 import '../styles/Formulaire.css';
 
+
 function Formulaire() {
   const [name, setName] = useState('');
   const [preparationTime, setPreparationTime] = useState('');
@@ -92,7 +93,6 @@ function Formulaire() {
       `Submitted ${name} ${preparationTime} ${preparationTime} ${cookTime} ${portion} ${difficulty} ${category} ${saison}`
     );
 
-
     // Créer un objet recette avec les valeurs des champs
     const recette = {
       name,
@@ -106,6 +106,14 @@ function Formulaire() {
       type,
       portion,
     };
+
+    fetch('http://localhost:3000/getRecipes',{
+      method : "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(recette), // body data type must match "Content-Type" header   
+    })
 
     // Envoyer l'objet recette à l'API ou effectuer d'autres opérations nécessaires
     // Réinitialiser les valeurs des champs après la soumission
