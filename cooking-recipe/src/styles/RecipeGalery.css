@@ -1,17 +1,3 @@
-/* CSS pour le composant Recette */
-
-h2 {
-  color: rgb(251, 211, 102);
-}
-
-.render {
-  margin: 16px;
-  border: solid 2px black;
-  border-radius: 10px;
-  width: calc(65% - 16px);
-  
-}
-
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -29,10 +15,4 @@ ul {
   box-sizing: border-box;
   text-decoration: none;
   color: black;
-}
-
-@media (max-width: 500px) {
-  .recipe-item {
-    width: calc(50% - 16px);
-  }
 }
