@@ -1,5 +1,4 @@
 
-
 .form-group {
   display: flex;
   justify-content: space-between;
@@ -12,6 +11,11 @@ input[type='number'] {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+
+.filter-title{
+  color:rgb(251, 211, 102);
+  text-align: center;
 }
 
 .filter-button-container {
@@ -36,7 +40,7 @@ input[type='number'] {
   background-color: rgb(251, 211, 102);
 }
 
-.whole {
+.filter {
   position: fixed;
   top: 0;
   left: -300px;
@@ -46,14 +50,14 @@ input[type='number'] {
   transition: left 0.3s ease;
 }
 
-.whole.visible {
+.filter.visible {
   background-color: rgb(78, 77, 75);
   left: 0;
 }
 
 .toggle-filters {
   position: fixed;
-  top: 30px;
+  top: 60px;
   left: 30px;
   width: 30px;
   height: 30px;
@@ -87,18 +91,21 @@ input[type='number'] {
   bottom: -8px;
 }
 
-.whole.visible .toggle-icon {
+.filter.visible .toggle-icon {
   transform: rotate(90deg);
+  background-color: rgb(251, 211, 102);
 }
 
-.whole.visible .toggle-icon::before {
+.filter.visible .toggle-icon::before {
   transform: rotate(45deg);
+  background-color: rgb(251, 211, 102);
 }
 
-.whole.visible .toggle-icon::after {
+.filter.visible .toggle-icon::after {
   transform: rotate(-45deg);
+  background-color: rgb(251, 211, 102);
 }
 
 .filter-container {
-  padding: 20px;
+  padding: 50px;
 }

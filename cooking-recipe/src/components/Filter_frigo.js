@@ -38,8 +38,10 @@ function Filter_frigo() {
   );
 
   return (
-    <div className="Filter_frigo">
-      Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo:
+    <div className= "Filter_frigo">
+      Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo :
+      <br/>
+      <br/>
       <div className="topping">
         {uniqueIngredients.map((ingredient, index) => (
           <div key={index}>
@@ -57,7 +59,7 @@ function Filter_frigo() {
       </div>
       <ul>
         {filteredRecipes.length === 0 ? (
-          <h1 className='error'>Pas de recette correspondante !</h1>
+          <h1 className ='error-frigo'>Pas de recette correspondante !</h1>
         ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
           <Link to={`/recette/${name}`} key={name} className="recipe-item">
             <div>

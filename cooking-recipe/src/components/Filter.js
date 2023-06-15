@@ -35,12 +35,12 @@ function Filter({ applyFilters }) {
   };
 
   return (
-    <div className={`whole ${filtersVisible ? 'visible' : ''}`}>
+    <div className={`filter ${filtersVisible ? 'visible' : ''}`}>
       <div className="toggle-filters" onClick={toggleFilters}>
         <div className="toggle-icon" />
       </div>
       <div className="filter-container">
-       <h2 className="aligne-title">Filtrer</h2>
+       <h2 className="filter-title">Filtrer</h2>
         <label>
       
           Recherche{' '}

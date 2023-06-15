@@ -1,16 +1,11 @@
-.aligne {
-    text-align: left;
-}
-.aligne-title {
-    text-align: left;
-    text-decoration: underline;
-}
 
 .frigo {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top:50px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex; /* Utiliser un affichage en flexbox */
+  justify-content: center;
 
   }
   
@@ -59,5 +54,12 @@
   
   .frigo-button:hover {
     background-color: #0056b3;
+  }
+
+  .error-frigo{
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #e99204;
   }
   
