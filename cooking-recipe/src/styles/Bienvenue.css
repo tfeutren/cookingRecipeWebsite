@@ -6,7 +6,7 @@
     text-decoration: underline;
 }
 
-.whole {
+.bienvenue {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
@@ -35,27 +35,5 @@
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 17px;
-  }
-  
-  button {
-    width: 48%;
-    padding: 10px;
-    margin: 4px;
-    border: none;
-    border-radius: 3px;
-    background-color: #08090b;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #000000;
   }
   

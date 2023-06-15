@@ -1,23 +1,29 @@
 .banner {
+	position: fixed;
+	width : 100%;
 	color: rgb(28, 42, 57);
 	text-align: right;
 	padding: 15px;
 	display: flex;
 	flex-direction: row;
 	background-color: rgb(251, 211, 102);
-	justify-content: flex-end;
 	align-items: center;
+	font-size:23px;
+	justify-content: center;
+	margin-top: -110px;
 }
 
 .link {
 	padding-right: calc(7% - 16px);
-	font-style: bold;
 	color: rgb(28, 42, 57);
 	text-decoration: none;
-	align-items: center;
 }
 
+.link:hover {
+	text-decoration: underline;
+  }
+
 .logo {
-	padding-right: calc(5% - 16px);
-	height: 100px;
+	padding-right: calc(5% - 100px);
+	height: 90px;
 }
