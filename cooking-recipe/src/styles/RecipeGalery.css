@@ -9,6 +9,7 @@ h2 {
   border: solid 2px black;
   border-radius: 10px;
   width: calc(65% - 16px);
+  
 }
 
 ul {
