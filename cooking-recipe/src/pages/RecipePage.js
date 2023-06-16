@@ -22,7 +22,7 @@ function RecipePage() {
   return (
     <div className='recipePage'>
       <h1>{name}</h1>
-      <img src={recipe.picture} className="render" alt={name} />
+      <img src={recipe.picture} className="picture" alt={name} />
       <div className='textRecipe'>
         <h2>Informations :</h2>
 
