@@ -111,6 +111,17 @@ input[type='number'] {
   bottom: -8px;
 }
 
+.toggle-button{
+  width: 60px;
+  height: 60px;
+  background-color:transparent;
+  border-color: transparent;
+  position: relative;
+  top: -30px;
+  left: -10px;
+  cursor: pointer;
+}
+
 .filter.visible .toggle-icon {
   transform: rotate(90deg);
   background-color: rgb(251, 211, 102);

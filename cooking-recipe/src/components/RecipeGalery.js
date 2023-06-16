@@ -10,7 +10,7 @@ function RecipeGalery({ recipeFilter }) {
     <div>
       <ul>
         {filteredRecipes.length === 0 ? (
-          <h1 className='error'>Pas de recette correspondante !</h1>
+          <h1 className='error-frigo'>Pas de recette correspondante !</h1>
         ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
           <Link to={`/recette/${name}`} key={name} className="recipe-item">
             <div>
