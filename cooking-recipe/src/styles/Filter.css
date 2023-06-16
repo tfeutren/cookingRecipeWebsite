@@ -30,10 +30,11 @@ input[type='number'] {
   margin: 4px;
   border: none;
   border-radius: 3px;
-  background-color: #000203;
+  background-color: #eae8e2;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+  color : black;
 }
 
 .filter-button:hover {
@@ -53,6 +54,25 @@ input[type='number'] {
 .filter.visible {
   background-color: rgb(78, 77, 75);
   left: 0;
+}
+
+.label-police{
+  color:rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#police{
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 4px;
+  background-color: transparent;
+  outline: none;
+  width: 50%;
 }
 
 .toggle-filters {

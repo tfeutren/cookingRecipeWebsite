@@ -41,8 +41,7 @@ function Filter({ applyFilters }) {
       </div>
       <div className="filter-container">
        <h2 className="filter-title">Filtrer</h2>
-        <label>
-      
+        <label className='label-police'>
           Recherche{' '}
           <input
             type="string"
@@ -50,23 +49,21 @@ function Filter({ applyFilters }) {
             onChange={(e) => setName(e.target.value.toLowerCase())}
           />
         </label>
-        <label>
+        <label className='label-category'>
         <br/>
         <br/>
-          Catégorie{' '}
-          <select value={category} onChange={(e) => setCategory(e.target.value)}>
-            <option value="">Selection</option>
+          <select value={category} id="category" onChange={(e) => setCategory(e.target.value)}>
+            <option value="">Catégorie</option>
             <option value={MealCategory.entree}>Entrée</option>
             <option value={MealCategory.plat}>Plat</option>
             <option value={MealCategory.dessert}>Dessert</option>
           </select>
         </label>
-        <label>
         <br/>
         <br/>
-          Difficulté max{' '}
-          <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
-            <option value="">Select Difficulty</option>
+        <label className='label-difficulty'>
+          <select value={difficulty} id = "difficulty" onChange={(e) => setDifficulty(e.target.value)}>
+            <option value="">Difficulté max</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -74,22 +71,22 @@ function Filter({ applyFilters }) {
             <option value="5">5</option>
           </select>
         </label>
-        <label>
+        <label className='label-police'>
         <br/>
         <br/>
           Temps max{' '}
+          <br/>
           <input
             type="number"
             value={totalTimeMax}
             onChange={(e) => setTotalTimeMax(e.target.value)}
           />
         </label>
-        <label>
+        <label className='label-season'>
         <br/>
         <br/>
-          Saison{' '}
-          <select value={season} onChange={(e) => setSeason(e.target.value)}>
-            <option value="">Selection</option>
+          <select value={season} id = "season" onChange={(e) => setSeason(e.target.value)}>
+            <option value="">Saison</option>
             <option value="summer">Ete</option>
             <option value="winter">Hiver</option>
             <option value="spring">Printemps</option>
