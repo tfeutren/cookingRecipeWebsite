@@ -2,7 +2,14 @@
   text-align: center;
   background-color: rgb(255, 255, 255);
   padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
+}
+
+.content{
+  flex:1;
 }
 
 h1 {
@@ -38,4 +45,12 @@ th {
   .picture {
     width: calc(50% - 16px);
   }
+}
+
+.footer {
+  padding: 15px;
+  background-color: rgb(251, 211, 102);
+  color: rgb(28, 42, 57);
+  text-align: center;
+  margin-top: auto;
 }

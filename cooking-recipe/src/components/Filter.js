@@ -38,6 +38,7 @@ function Filter({ applyFilters }) {
     <div className={`filter ${filtersVisible ? 'visible' : ''}`}>
       <div className="toggle-filters" onClick={toggleFilters}>
         <div className="toggle-icon" />
+        <button className="toggle-button" />
       </div>
       <div className="filter-container">
        <h2 className="filter-title">Filtrer</h2>

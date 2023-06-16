@@ -12,5 +12,7 @@ Projet from TC student at INSA Lyon, to learn how to use ReactJS framework, crea
 
 ## Start project
 - Install yarn : ```npm install yarn```
-- Launch the project : ```cd cooking-recipe``` and ```npm start```
+- Launch the frontend : ```cd cooking-recipe``` and ```npm start```
+- Backend part with ```node src/backend/backend.js``` (Server listening on port 8000)
+
 

@@ -8,6 +8,7 @@ import RecipePage from './pages/RecipePage';
 import Formulaire from './pages/Formulaire';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
+import Filter from './components/Filter';
 import { MealCategory } from "./utility"
 
 import RecipeGalery from './components/RecipeGalery';
@@ -17,18 +18,21 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Banner />
-        {/* Define the link pages */}
-        <Routes>
-          <Route path="/" element={<AccueilPage />} />
-          <Route path="/entrees" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.entree} />} />
-          <Route path="/plats" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.plat} />} />
-          <Route path="/desserts" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.dessert} />} />
-          <Route path="/frigo" element={<FrigoPage />} />
-          <Route path="/recette/:name" element={<RecipePage />} />
-          <Route path="/formulaire" element={<Formulaire />} />
-        </Routes>
-        <Footer/>
+        <div className='content'>
+          <Banner />
+          <Filter />
+          {/* Define the link pages */}
+          <Routes>
+            <Route path="/" element={<AccueilPage />} />
+            <Route path="/entrees" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.entree} />} />
+            <Route path="/plats" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.plat} />} />
+            <Route path="/desserts" element={<RecipeGalery recipeFilter={r => r.category === MealCategory.dessert} />} />
+            <Route path="/frigo" element={<FrigoPage />} />
+            <Route path="/recette/:name" element={<RecipePage />} />
+            <Route path="/formulaire" element={<Formulaire />} />
+          </Routes>
+        </div>
+        <Footer />
       </Router>
     </div>
   );
