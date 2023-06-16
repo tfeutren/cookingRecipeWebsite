@@ -58,16 +58,19 @@ body {
 }
 
 .label-name,
+.label-picure,
 .label-preparationTime,
 .label-cookTime,
 .label-portion,
 .label-description,
+.label-picture,
 .label-instruction {
   color: rgb(0, 0, 0);
   font-size: 16px;
 }
 
 #name,
+#picture,
 #preparationTime,
 #cookTime,
 #portion,

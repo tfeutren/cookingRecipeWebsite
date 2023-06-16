@@ -16,7 +16,7 @@ function RecipeGalery({ recipeFilter }) {
             <div>
               <h2>{name}</h2>
               <p>Difficulté : {renderDifficulty(difficulty)}</p>
-              <p>Temps Total : {preparationTime + cookTime} min</p>
+              <p>Temps Total : {parseInt(preparationTime) + parseInt(cookTime)} min</p>
               <img src={picture} className="picture" alt={name} />
             </div>
           </Link>

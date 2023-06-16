@@ -5,6 +5,7 @@ import '../styles/Formulaire.css';
 
 function Formulaire() {
   const [name, setName] = useState('');
+  const [picture, setPicture] = useState('');
   const [preparationTime, setPreparationTime] = useState('');
   const [cookTime, setCookTime] = useState('');
   const [difficulty, setDifficulty] = useState('');
@@ -19,28 +20,18 @@ function Formulaire() {
   const [description, setDescription] = useState('');
 
   const handleAddIngredient = () => {
-    setIngredients([...ingredients, '']);
-    setQuantity([...quantity, '']);
-    setUnit([...unit, '']);
+    setIngredients([...ingredients, { name: '', quantity: '', unit: '' }]);
   };
 
   const handleRemoveIngredient = (index) => {
     const updatedIngredients = [...ingredients];
-    const updatedQuantity = [...quantity];
-    const updatedUnit = [...unit];
-
     updatedIngredients.splice(index, 1);
-    updatedQuantity.splice(index, 1);
-    updatedUnit.splice(index, 1);
-
     setIngredients(updatedIngredients);
-    setQuantity(updatedQuantity);
-    setUnit(updatedUnit);
   };
 
-  const handleIngredientChange = (index, value) => {
+  const handleIngredientChange = (index, property, value) => {
     const updatedIngredients = [...ingredients];
-    updatedIngredients[index] = value;
+    updatedIngredients[index][property] = value;
     setIngredients(updatedIngredients);
   };
 
@@ -84,10 +75,6 @@ function Formulaire() {
     setDifficulty(e.target.value);
   };
 
-  const handleChangeDescription = (e) => {
-    setDescription(e.target.value);
-  };
-
   const handleSubmit = () => {
     alert(
       "Votre recette a bien été enregistrée !"   
@@ -96,6 +83,7 @@ function Formulaire() {
     // Créer un objet recette avec les valeurs des champs
     const recette = {
       name,
+      picture,
       preparationTime,
       cookTime,
       difficulty,
@@ -106,6 +94,7 @@ function Formulaire() {
       instructions,
       type,
       portion,
+      description
     };
 
     fetch('http://localhost:8000/',{
@@ -119,8 +108,9 @@ function Formulaire() {
     // Envoyer l'objet recette à l'API ou effectuer d'autres opérations nécessaires
     // Réinitialiser les valeurs des champs après la soumission
     setName('');
-    setPreparationTime('');
-    setCookTime('');
+    setPicture('');
+    setPreparationTime();
+    setCookTime();
     setDifficulty('');
     setIngredients([]);
     setQuantity([]);
@@ -128,6 +118,7 @@ function Formulaire() {
     setUnit([]);
     setType('');
     setPortion('');
+    setDescription('');
   };
 
   return (
@@ -143,14 +134,14 @@ function Formulaire() {
       <label className='label-preparationTime'>
         <span>Temps de préparation (en minutes)</span>
         <div>
-          <input type="text" id="preparationTime" value={preparationTime} onChange={(e) => setPreparationTime(e.target.value)} />
+          <input type="int" id="preparationTime" value={preparationTime} onChange={(e) => setPreparationTime(e.target.value)} />
         </div>
       </label>
       <br />
       <label className='label-cookTime'>
         <span>Temps de cuisson (en minutes)</span>
         <div>
-          <input type="text" id="cookTime" value={cookTime} onChange={(e) => setCookTime(e.target.value)} />
+          <input type="int" id="cookTime" value={cookTime} onChange={(e) => setCookTime(e.target.value)} />
         </div>
       </label>
       <br />
@@ -165,6 +156,13 @@ function Formulaire() {
         <span>Description</span>
         <div>
           <input type="text" id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        </div>
+      </label>
+      <br />
+      <label className='label-picture'>
+        <span>URL Photo</span>
+        <div>
+          <input type="text" id="picture" value={picture} onChange={(e) => setPicture(e.target.value)} />
         </div>
       </label>
       <br />
@@ -201,40 +199,40 @@ function Formulaire() {
       </label>
       <br />
       <br />
-
       {ingredients.map((ingredient, index) => (
         <div key={index}>
           <label>
             Ingrédient{' '}
             <input
               type="text"
-              value={ingredient}
-              onChange={(e) => handleIngredientChange(index, e.target.value)}
+              value={ingredient.name}
+              onChange={(e) => handleIngredientChange(index, 'name', e.target.value)}
             />
           </label>
           <label>
             Quantité{' '}
             <input
-              type="float"
-              value={quantity[index]}
-              onChange={(e) => handleQuantityChange(index, e.target.value)}
+              type="text"
+              value={ingredient.quantity}
+              onChange={(e) => handleIngredientChange(index, 'quantity', e.target.value)}
             />
           </label>
           <label>
             Unité{' '}
             <input
               type="text"
-              value={unit[index]}
-              onChange={(e) => handleUnitChange(index, e.target.value)}
+              value={ingredient.unit}
+              onChange={(e) => handleIngredientChange(index, 'unit', e.target.value)}
             />
           </label>
-          <button className="form-button" onClick={() => handleRemoveIngredient(index)}>Supprimer</button>
-
+          <button className="form-button" onClick={() => handleRemoveIngredient(index)}>
+            Supprimer
+          </button>
         </div>
       ))}
-      <button className="form-button" onClick={handleAddIngredient}>Ajouter un ingrédient</button>
-
-
+      <button className="form-button" onClick={handleAddIngredient}>
+        Ajouter un ingrédient
+      </button>
       <br />
       <br />
 
