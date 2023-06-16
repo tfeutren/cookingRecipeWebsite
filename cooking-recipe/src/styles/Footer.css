@@ -1,13 +1,15 @@
-
-  .footer {
-	color: rgb(28, 42, 57);
-	text-align: right;
+.footer {
+	margin-bottom: 0;
+	background-position: bottom;
+	left: 0;
+	width: 100%;
 	padding: 15px;
 	background-color: rgb(251, 211, 102);
-}
+	color: rgb(28, 42, 57);
+	text-align: center;
+  }
   
   .footer-text {
-	text-align: center;
 	font-size: 20px;
   }
   
