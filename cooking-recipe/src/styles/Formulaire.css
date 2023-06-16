@@ -33,6 +33,22 @@ body {
   background-color: rgb(251, 211, 102);
 }
 
+.remove-button {
+  width: fit-content;
+  padding: 10px;
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: rgb(140, 0, 0);
+  color:white;
+}
+
+
 .label-category,
 .label-difficulty,
 .label-season {
@@ -63,19 +79,13 @@ body {
 .label-cookTime,
 .label-portions,
 .label-description,
-.label-picture,
-.label-instruction {
+.label-picture{
   color: rgb(0, 0, 0);
   font-size: 16px;
 }
 
-#name,
 #picture,
-#preparationTime,
-#cookTime,
-#portions,
-#description,
-#instruction{
+#description{
   display: inline-block;
   text-align: center;
   border: none;
@@ -86,6 +96,45 @@ body {
   background-color: transparent;
   outline: none;
   width: 50%;
+}
+#name,
+#preparationTime,
+#cookTime,
+#portions{
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 4px;
+  background-color: transparent;
+  outline: none;
+  width: 10%;
+}
+
+.label-instruction input[type="text"] {
+  display: inline-block;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 4px;
+  background-color: transparent;
+  outline: none;
+}
+
+.label-ingredient input[type="text"] {
+  display: inline-block;
+  width: 10%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 5px;
+  margin-top: 4px;
+  background-color: transparent;
+  outline: none;
 }
 
 

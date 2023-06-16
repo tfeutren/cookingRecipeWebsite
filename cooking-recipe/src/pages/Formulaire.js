@@ -40,15 +40,15 @@ function Formulaire() {
   };
 
   const handleRemoveInstruction = (index) => {
-    const updatedInstruction = [...instructions];
-    updatedInstruction.splice(index, 1);
-    setInstructions(updatedInstruction);
+    const updatedInstructions = [...instructions];
+    updatedInstructions.splice(index, 1);
+    setInstructions(updatedInstructions);
   };
 
   const handleInstructionChange = (index, value) => {
-    const updatedInstruction = [...instructions];
-    updatedInstruction[index] = value;
-    setInstructions(updatedInstruction);
+    const updatedInstructions = [...instructions];
+    updatedInstructions[index] = value;
+    setInstructions(updatedInstructions);
   };
 
   const handleChangeCategory = (e) => {
@@ -111,7 +111,7 @@ function Formulaire() {
 
   return (
     <div>
-      <h1>Ajouter une recette</h1>
+      <h1>Formulaire à compléter</h1>
       <label className='label-name'>
         <span>Nom</span>
         <div>
@@ -189,8 +189,8 @@ function Formulaire() {
       <br />
       {ingredients.map((ingredient, index) => (
         <div key={index}>
-          <label>
-            Ingrédient{' '}
+          <label className='label-ingredient'>
+            Ingrédient n° {index+1}{' '}
             <input
               type="text"
               value={ingredient.name}
@@ -205,7 +205,7 @@ function Formulaire() {
               onChange={(e) => handleIngredientChange(index, 'quantity', parseFloat(e.target.value))}
             />
           </label>
-          <label>
+          <label className='label-ingredient'>
             Unité{' '}
             <input
               type="text"
@@ -213,7 +213,7 @@ function Formulaire() {
               onChange={(e) => handleIngredientChange(index, 'unit', e.target.value)}
             />
           </label>
-          <button className="form-button" onClick={() => handleRemoveIngredient(index)}>
+          <button className="remove-button" onClick={() => handleRemoveIngredient(index)}>
             Supprimer
           </button>
         </div>
@@ -227,14 +227,15 @@ function Formulaire() {
       {instructions.map((instruction, index) => (
         <div key={index}>
           <label className="label-instruction">
-            Instructions{' '}
+            Etape {index+1}{' '}
+            <br/>
             <input
               type="text"
               value={instruction}
               onChange={(e) => handleInstructionChange(index, e.target.value)}
             />
           </label>
-          <button className="form-button" onClick={() => handleRemoveInstruction(index)}>Supprimer</button>
+          <button className="remove-button" onClick={() => handleRemoveInstruction(index)}>Supprimer</button>
         </div>
       ))}
       <button className="form-button" onClick={handleAddInstruction}>Ajouter une instruction</button>
