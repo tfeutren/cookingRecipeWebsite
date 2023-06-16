@@ -61,7 +61,7 @@ body {
 .label-picure,
 .label-preparationTime,
 .label-cookTime,
-.label-portion,
+.label-portions,
 .label-description,
 .label-picture,
 .label-instruction {
@@ -73,7 +73,7 @@ body {
 #picture,
 #preparationTime,
 #cookTime,
-#portion,
+#portions,
 #description,
 #instruction{
   display: inline-block;

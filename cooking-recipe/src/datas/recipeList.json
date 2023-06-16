@@ -348,36 +348,36 @@
     "picture": "https://recettessimples.fr/images/Coquillettes_Casserole_1.jpg",
     "preparationTime": 2,
     "cookTime": 10,
-    "difficulty": "1",
+    "difficulty": 1,
     "ingredients": [
       {
-         "name": "beurre",
-         "quantity": 10,
-         "unit": "grammes"
-       },
-       {
-         "name": "pâte",
-         "quantity": 150,
-         "unit": "grammes"
-       }
+        "name": "beurre",
+        "quantity": 10,
+        "unit": "grammes"
+      },
+      {
+        "name": "pâte",
+        "quantity": 150,
+        "unit": "grammes"
+      }
     ],
     "category": "plat",
     "instructions": [
       "Faire bouillir de l'eau",
       "Mettre les pâtes dans l'eau",
       "sortir les pâte de l'eau",
-      "mettre dans asciette et ajouter le beurre"
+      "mettre dans assiette et ajouter le beurre"
     ],
     "type": "",
-    "portion": "1",
+    "portions": 1,
     "description": "Bien pour les fin de mois difficiles"
   },
   {
     "name": "test",
     "picture": "",
-    "preparationTime": "12",
-    "cookTime": "1",
-    "difficulty": "5",
+    "preparationTime": 12,
+    "cookTime": 1,
+    "difficulty": 5,
     "ingredients": [
       {
         "name": "beurre",
@@ -398,7 +398,37 @@
       "manger"
     ],
     "type": "",
-    "portion": "1",
+    "portions": 1,
     "description": "miam miam"
+  },
+  {
+    "name": "poulet au sel",
+    "picture": "https://www.vanessacuisine.fr/wp-content/uploads/2020/11/blanc-poulet-four-500x500.jpg",
+    "preparationTime": "30",
+    "cookTime": "10",
+    "difficulty": "2",
+    "ingredients": [
+      {
+        "name": "poulet",
+        "quantity": "1",
+        "unit": "poulet"
+      },
+      {
+        "name": "sel",
+        "quantity": "1",
+        "unit": "pincée"
+      }
+    ],
+    "quantity": [],
+    "unit": [],
+    "category": "plat",
+    "instructions": [
+      "mettre du sel",
+      "cuire le poulet",
+      "manger"
+    ],
+    "type": "",
+    "portions": "3",
+    "description": "miam cest bon"
   }
 ]

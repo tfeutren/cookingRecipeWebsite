@@ -14,7 +14,7 @@ function Formulaire() {
   const [unit, setUnit] = useState([]);
   const [category, setCategory] = useState('');
   const [type, setType] = useState('');
-  const [portion, setPortion] = useState('');
+  const [portions, setportions] = useState('');
   const [saison, setSaison] = useState('');
   const [instructions, setInstructions] = useState([]);
   const [description, setDescription] = useState('');
@@ -93,7 +93,7 @@ function Formulaire() {
       category,
       instructions,
       type,
-      portion,
+      portions,
       description
     };
 
@@ -117,7 +117,7 @@ function Formulaire() {
     setCategory('');
     setUnit([]);
     setType('');
-    setPortion('');
+    setportions('');
     setDescription('');
   };
 
@@ -145,10 +145,10 @@ function Formulaire() {
         </div>
       </label>
       <br />
-      <label className='label-portion'>
-        <span>Portion(s)</span>
+      <label className='label-portions'>
+        <span>portions</span>
         <div>
-          <input type="int" id="portion" value={portion} onChange={(e) => setPortion(e.target.value)} />
+          <input type="int" id="portions" value={portions} onChange={(e) => setportions(e.target.value)} />
         </div>
       </label>
       <br />
