@@ -19,7 +19,7 @@ const RecipeList = ({ searchIngredient }) => {
     <div>
       <ul>
         {filteredRecipes.length === 0 ? (
-          <h1 className='error'>Pas de recette correspondante !</h1>
+           <h1 className='error-frigo'>Pas de recette correspondante !</h1>
         ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
           <Link to={`/recette/${name}`} key={name} className="recipe-item">
             <div>
@@ -33,7 +33,7 @@ const RecipeList = ({ searchIngredient }) => {
       </ul>
     </div>
   );
-};
+}
 
 const FrigoPage = () => {
   const [ingredient, setIngredient] = useState('');
@@ -44,7 +44,11 @@ const FrigoPage = () => {
 
   return (
     <div>
-      <h1>Merci de taper qu'un ingrédient à la fois</h1>
+       Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo :
+       <br/>
+      <strong>Merci de taper qu'un ingrédient à la fois</strong>
+      <br/>
+      <br/>
       <form>
         <label>
           Nom :
