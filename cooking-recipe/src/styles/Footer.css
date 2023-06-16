@@ -1,14 +1,13 @@
-.footer {
+
+  .footer {
 	color: rgb(28, 42, 57);
 	text-align: right;
 	padding: 15px;
-	display: flex;
-	flex-direction: row;
 	background-color: rgb(251, 211, 102);
-	align-items: center;
-    justify-content: center;
 }
-
-.footer-text {
-    text-align: center;
-}
+  
+  .footer-text {
+	text-align: center;
+	font-size: 20px;
+  }
+  
