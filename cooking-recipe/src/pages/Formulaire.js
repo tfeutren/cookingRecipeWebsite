@@ -35,18 +35,6 @@ function Formulaire() {
     setIngredients(updatedIngredients);
   };
 
-  const handleQuantityChange = (index, value) => {
-    const updatedQuantity = [...quantity];
-    updatedQuantity[index] = value;
-    setQuantity(updatedQuantity);
-  };
-
-  const handleUnitChange = (index, value) => {
-    const updatedUnit = [...unit];
-    updatedUnit[index] = value;
-    setUnit(updatedUnit);
-  };
-
   const handleAddInstruction = () => {
     setInstructions([...instructions, '']);
   };
@@ -134,21 +122,21 @@ function Formulaire() {
       <label className='label-preparationTime'>
         <span>Temps de préparation (en minutes)</span>
         <div>
-          <input type="int" id="preparationTime" value={preparationTime} onChange={(e) => setPreparationTime(e.target.value)} />
+          <input type="int" id="preparationTime" value={preparationTime} onChange={(e) => setPreparationTime(parseInt(e.target.value))} />
         </div>
       </label>
       <br />
       <label className='label-cookTime'>
         <span>Temps de cuisson (en minutes)</span>
         <div>
-          <input type="int" id="cookTime" value={cookTime} onChange={(e) => setCookTime(e.target.value)} />
+          <input type="int" id="cookTime" value={cookTime} onChange={(e) => setCookTime(parseInt(e.target.value))} />
         </div>
       </label>
       <br />
       <label className='label-portions'>
-        <span>portions</span>
+        <span>Portion(s)</span>
         <div>
-          <input type="int" id="portions" value={portions} onChange={(e) => setportions(e.target.value)} />
+          <input type="int" id="portions" value={portions} onChange={(e) => setportions(parseInt(e.target.value))} />
         </div>
       </label>
       <br />
@@ -212,9 +200,9 @@ function Formulaire() {
           <label>
             Quantité{' '}
             <input
-              type="text"
+              type="number"
               value={ingredient.quantity}
-              onChange={(e) => handleIngredientChange(index, 'quantity', e.target.value)}
+              onChange={(e) => handleIngredientChange(index, 'quantity', parseFloat(e.target.value))}
             />
           </label>
           <label>

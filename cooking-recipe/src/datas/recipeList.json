@@ -345,7 +345,7 @@
   },
   {
     "name": "Pâtes au beurre",
-    "picture": "https://recettessimples.fr/images/Coquillettes_Casserole_1.jpg",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu8brgP-aSic0tD7YEV0NbEbSl8w0bbhtX2g&usqp=CAU",
     "preparationTime": 2,
     "cookTime": 10,
     "difficulty": 1,
@@ -373,45 +373,16 @@
     "description": "Bien pour les fin de mois difficiles"
   },
   {
-    "name": "test",
-    "picture": "",
-    "preparationTime": 12,
-    "cookTime": 1,
-    "difficulty": 5,
-    "ingredients": [
-      {
-        "name": "beurre",
-        "quantity": 1,
-        "unit": "kg"
-      },
-      {
-        "name": "sel",
-        "quantity": 24,
-        "unit": "ml"
-      }
-    ],
-    "quantity": [],
-    "unit": [],
-    "category": "entree",
-    "instructions": [
-      "préparer",
-      "manger"
-    ],
-    "type": "",
-    "portions": 1,
-    "description": "miam miam"
-  },
-  {
-    "name": "poulet au sel",
+    "name": "Blancs de poulet au four",
     "picture": "https://www.vanessacuisine.fr/wp-content/uploads/2020/11/blanc-poulet-four-500x500.jpg",
-    "preparationTime": "30",
-    "cookTime": "10",
+    "preparationTime": 1,
+    "cookTime": 20,
     "difficulty": "2",
     "ingredients": [
       {
-        "name": "poulet",
+        "name": "Blanc de poulet",
         "quantity": "1",
-        "unit": "poulet"
+        "unit": "blanc"
       },
       {
         "name": "sel",
@@ -423,12 +394,13 @@
     "unit": [],
     "category": "plat",
     "instructions": [
-      "mettre du sel",
-      "cuire le poulet",
-      "manger"
+      "Préchauffer le four à 180-190°C.",
+      "assaisonner le poulet",
+      "mettre au four 20 min",
+      "Déguster"
     ],
     "type": "",
-    "portions": "3",
-    "description": "miam cest bon"
+    "portions": 2,
+    "description": "Excellent"
   }
 ]

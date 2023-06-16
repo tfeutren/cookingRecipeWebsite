@@ -8,7 +8,6 @@ import RecipePage from './pages/RecipePage';
 import Formulaire from './pages/Formulaire';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
-import Filter from './components/Filter';
 import { MealCategory } from "./utility"
 
 import RecipeGalery from './components/RecipeGalery';
@@ -20,7 +19,6 @@ function App() {
       <Router>
         <div className='content'>
           <Banner />
-          <Filter />
           {/* Define the link pages */}
           <Routes>
             <Route path="/" element={<AccueilPage />} />
