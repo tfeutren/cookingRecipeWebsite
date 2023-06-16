@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/Filter_frigo.css';
 import { Link } from 'react-router-dom';
 import { renderDifficulty } from '../utility';
 import { recipeList } from '../datas/recipeList';
 
-const RecipeList = ({ searchIngredient }) => {
+const RecipeList = ({ searchIngredients }) => {
   const removeAccents = (str) => {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   };
 
   const filteredRecipes = recipeList.filter(recipe => {
     return recipe.ingredients.some(ingredient =>
-      removeAccents(ingredient.name.toLowerCase()).includes(removeAccents(searchIngredient.toLowerCase()))
+      searchIngredients.some(searchIngredient =>
+        removeAccents(ingredient.name.toLowerCase()).includes(removeAccents(searchIngredient.toLowerCase()))
+      )
     );
   });
 
@@ -19,43 +21,50 @@ const RecipeList = ({ searchIngredient }) => {
     <div>
       <ul>
         {filteredRecipes.length === 0 ? (
-           <h1 className='error-frigo'>Pas de recette correspondante !</h1>
-        ) : filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
-          <Link to={`/recette/${name}`} key={name} className="recipe-item">
-            <div>
-              <h2>{name}</h2>
-              <p>Difficulté : {renderDifficulty(difficulty)}</p>
-              <p>Temps Total : {preparationTime + cookTime} min</p>
-              <img src={picture} className="picture" alt={name} />
-            </div>
-          </Link>
-        ))}
+          <h1 className='error-frigo'>Pas de recette correspondante !</h1>
+        ) : (
+          filteredRecipes.map(({ name, difficulty, preparationTime, cookTime, picture }) => (
+            <Link to={`/recette/${name}`} key={name} className="recipe-item">
+              <div>
+                <h2>{name}</h2>
+                <p>Difficulté : {renderDifficulty(difficulty)}</p>
+                <p>Temps Total : {preparationTime + cookTime} min</p>
+                <img src={picture} className="picture" alt={name} />
+              </div>
+            </Link>
+          ))
+        )}
       </ul>
     </div>
   );
 };
 
 const FrigoPage = () => {
-  const [ingredient, setIngredient] = useState('');
+  const [ingredients, setIngredients] = useState('');
 
   const handleInputChange = (event) => {
-    setIngredient(event.target.value);
+    setIngredients(event.target.value);
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const inputIngredients = ingredients.split(',').map(ingredient => ingredient.trim());
+    setIngredients(inputIngredients.join(', '));
   };
 
   return (
     <div>
-       Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo :
-       <br/>
-      <strong>Merci de taper qu'un ingrédient à la fois</strong>
+      Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo :
+      <br/>
+      <strong>Merci de taper les ingrédients séparés par des virgules</strong>
       <br/>
       <br/>
-      <form>
+      <form onSubmit={handleSearch}>
         <label>
-          Nom :
-          <input type="text" value={ingredient} onChange={handleInputChange} />
+          <input type="text" id="ingredient" value={ingredients} onChange={handleInputChange} />
         </label>
       </form>
-      <RecipeList searchIngredient={ingredient} />
+      <RecipeList searchIngredients={ingredients.split(',').map(ingredient => ingredient.trim())} />
     </div>
   );
 };
