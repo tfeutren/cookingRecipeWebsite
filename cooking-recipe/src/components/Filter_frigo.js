@@ -44,7 +44,7 @@ const FrigoPage = () => {
 
   return (
     <div>
-      <h1>Voici la page Frigo !</h1>
+      <h1>Merci de taper qu'un ingrédient à la fois</h1>
       <form>
         <label>
           Nom :
