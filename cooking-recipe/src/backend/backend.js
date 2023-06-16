@@ -11,9 +11,9 @@ app.use(cors({
 }));
 
 // Assuming recipeList.json is in the same directory as the server file
-const filePath = path.join('../src/datas/recipeList.json');
+const filePath = '../datas/recipeList.json';
 
-app.post('/getRecipes', (req, res) => {
+app.post('/', (req, res) => {
   const formData = req.body;
 
   // Read existing data from the file
@@ -41,13 +41,14 @@ app.post('/getRecipes', (req, res) => {
   }
 });
 
-app.get("*", async (req, res) => {
+app.get("/", async (req, res) => {
   let fileData = null;
   try {
+    console.log(filePath);
     fileData = fs.readFileSync(filePath, 'utf-8');
   } catch (error) {
-    console.log('Error reading JSON file:', error);
-    res.status(500).send('Error reading JSON file');
+    console.log('Error reading JSON file:');
+    res.status(500).send('Error reading JSON file: ');
     return;
   }
   res.send(JSON.stringify(fileData))

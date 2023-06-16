@@ -15,7 +15,7 @@ function Formulaire() {
   const [type, setType] = useState('');
   const [portion, setPortion] = useState('');
   const [saison, setSaison] = useState('');
-  const [instruction, setInstruction] = useState([]);
+  const [instructions, setInstructions] = useState([]);
   const [description, setDescription] = useState('');
 
   const handleAddIngredient = () => {
@@ -57,19 +57,19 @@ function Formulaire() {
   };
 
   const handleAddInstruction = () => {
-    setInstruction([...instruction, '']);
+    setInstructions([...instructions, '']);
   };
 
   const handleRemoveInstruction = (index) => {
-    const updatedInstruction = [...instruction];
+    const updatedInstruction = [...instructions];
     updatedInstruction.splice(index, 1);
-    setInstruction(updatedInstruction);
+    setInstructions(updatedInstruction);
   };
 
   const handleInstructionChange = (index, value) => {
-    const updatedInstruction = [...instruction];
+    const updatedInstruction = [...instructions];
     updatedInstruction[index] = value;
-    setInstruction(updatedInstruction);
+    setInstructions(updatedInstruction);
   };
 
   const handleChangeCategory = (e) => {
@@ -103,11 +103,12 @@ function Formulaire() {
       quantity,
       unit,
       category,
+      instructions,
       type,
       portion,
     };
 
-    fetch('http://localhost:3000/getRecipes',{
+    fetch('http://localhost:8000/',{
       method : "POST",
       headers: {
         "Content-Type": "application/json",
@@ -237,7 +238,7 @@ function Formulaire() {
       <br />
       <br />
 
-      {instruction.map((instruction, index) => (
+      {instructions.map((instruction, index) => (
         <div key={index}>
           <label className="label-instruction">
             Instructions{' '}
