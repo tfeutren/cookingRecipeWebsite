@@ -66,7 +66,7 @@ function Filter_frigo() {
               <h2>{name}</h2>
               <p>Difficulté : {renderDifficulty(difficulty)}</p>
               <p>Temps Total : {preparationTime + cookTime} min</p>
-              <img src={picture} className="render" alt={name} />
+              <img src={picture} className="picture" alt={name} />
             </div>
           </Link>
         ))}
