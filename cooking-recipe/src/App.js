@@ -28,7 +28,7 @@ function App() {
           <Route path="/recette/:name" element={<RecipePage />} />
           <Route path="/formulaire" element={<Formulaire />} />
         </Routes>
-        <Footer />
+        <Footer/>
       </Router>
     </div>
   );

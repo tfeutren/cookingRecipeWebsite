@@ -5,7 +5,11 @@
 .textRecipe {
     text-align: left;
 }
-
+.recipe-picture{
+  margin: 10px;
+  border-radius: 10px;
+  width: 400px;
+}
 /* For Ingredient table */
 .table-container {
     width: 100%;

@@ -57,9 +57,22 @@
   }
 
   .error-frigo{
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     text-decoration: none;
     color: #e99204;
   }
+
+  #ingredient{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 4px;
+    background-color: transparent;
+    outline: none;
+    width: 50%;
+}
   

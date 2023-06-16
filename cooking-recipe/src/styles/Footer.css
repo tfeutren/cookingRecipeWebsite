@@ -1,14 +1,15 @@
 .footer {
-	color: rgb(28, 42, 57);
-	text-align: right;
+	margin-bottom: 0;
+	background-position: bottom;
+	left: 0;
+	width: 100%;
 	padding: 15px;
-	display: flex;
-	flex-direction: row;
 	background-color: rgb(251, 211, 102);
-	align-items: center;
-    justify-content: center;
-}
-
-.footer-text {
-    text-align: center;
-}
+	color: rgb(28, 42, 57);
+	text-align: center;
+  }
+  
+  .footer-text {
+	font-size: 20px;
+  }
+  
