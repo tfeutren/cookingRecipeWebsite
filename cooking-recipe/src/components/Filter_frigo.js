@@ -37,7 +37,7 @@ const RecipeList = ({ searchIngredients }) => {
       </ul>
     </div>
   );
-};
+}
 
 const FrigoPage = () => {
   const [ingredients, setIngredients] = useState('');
