@@ -10,24 +10,23 @@ app.use(cors({
   origin: 'http://localhost:3000' // Replace with your frontend URL
 }));
 
+// Assuming recipeList.json is in the same directory as the server file
+const filePath = path.join('../src/datas/recipeList.json');
 
-app.post('/api/save-data', (req, res) => {
+app.post('/getRecipes', (req, res) => {
   const formData = req.body;
 
-  // Assuming data.json is in the same directory as the server file
-  const filePath = path.join('../src/datas/recipeList.json');
-
   // Read existing data from the file
-  let existingData = [];
+  let fileData = null;
   try {
-    const fileData = fs.readFileSync(filePath, 'utf-8');
-    existingData = JSON.parse(fileData);
+    fileData = fs.readFileSync(filePath, 'utf-8');
   } catch (error) {
     console.log('Error reading JSON file:', error);
     res.status(500).send('Error reading JSON file');
     return;
   }
 
+  let existingData = JSON.parse(fileData);
   // Add the new form data to existing data
   existingData.push(formData);
 
@@ -40,6 +39,18 @@ app.post('/api/save-data', (req, res) => {
     console.log('Error writing JSON file:', error);
     res.status(500).send('Error writing JSON file');
   }
+});
+
+app.get("*", async (req, res) => {
+  let fileData = null;
+  try {
+    fileData = fs.readFileSync(filePath, 'utf-8');
+  } catch (error) {
+    console.log('Error reading JSON file:', error);
+    res.status(500).send('Error reading JSON file');
+    return;
+  }
+  res.send(JSON.stringify(fileData))
 });
 
 app.listen(8000, () => {
