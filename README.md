@@ -15,6 +15,7 @@ Projet from TC student at INSA Lyon, to learn how to use ReactJS framework, crea
 - Launch the frontend : ```cd cooking-recipe``` and ```npm start```
 - Backend part with :
  - ```npm install cors```
- - ```node src/backend/backend.js``` (Server listening on port 8000)
+ - Go to the backend directory : ```cd src/backend/```
+ - ```node backend.js``` (Server listening on port 8000)
 
 
