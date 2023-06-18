@@ -44,13 +44,13 @@ app.post('/', (req, res) => {
 app.get("/", async (req, res) => {
   let fileData = null;
   try {
-    console.log(filePath);
     fileData = fs.readFileSync(filePath, 'utf-8');
   } catch (error) {
     console.log('Error reading JSON file:');
     res.status(500).send('Error reading JSON file: ');
     return;
   }
+  console.log("Recipelist requested.")
   res.send(JSON.stringify(fileData))
 });
 

@@ -3,7 +3,7 @@ import { MealCategory } from '../utility';
 import '../styles/Formulaire.css';
 
 
-function Formulaire() {
+function Formulaire({recipeListSetter}) {
   const [name, setName] = useState('');
   const [picture, setPicture] = useState('');
   const [preparationTime, setPreparationTime] = useState('');
@@ -69,7 +69,7 @@ function Formulaire() {
     );
 
     // Créer un objet recette avec les valeurs des champs
-    const recette = {
+    const newRecipe = {
       name,
       picture,
       preparationTime,
@@ -85,15 +85,18 @@ function Formulaire() {
       description
     };
 
+    // Locally updates the recipe list.
+    recipeListSetter(currentList => [...currentList, newRecipe])
+
+    // Updates the list stored in the backend.
     fetch('http://localhost:8000/',{
       method : "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(recette), // body data type must match "Content-Type" header   
+      body: JSON.stringify(newRecipe),
     })
 
-    // Envoyer l'objet recette à l'API ou effectuer d'autres opérations nécessaires
     // Réinitialiser les valeurs des champs après la soumission
     setName('');
     setPicture('');

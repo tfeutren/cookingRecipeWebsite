@@ -8,7 +8,7 @@ import Filter from '../components/Filter';
 import Bienvenue from '../components/Bienvenue';
 import RecipeGalery from '../components/RecipeGalery';
 
-function AccueilPage() {
+function AccueilPage({ recipeList }) {
 
   const [filters, setFilters] = useState();
 
@@ -17,7 +17,7 @@ function AccueilPage() {
 
         <Bienvenue /> 
         <Filter applyFilters={setFilters} />
-        <RecipeGalery recipeFilter={filters} />
+        <RecipeGalery recipeFilter={filters} recipeList={recipeList} />
         <LeSaviezVous />
 
     </div>

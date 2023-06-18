@@ -3,11 +3,11 @@ import Filter_frigo from '../components/Filter_frigo';
 import '../styles/Filter_frigo.css';
 
 
-const FrigoPage = () => {
+const FrigoPage = ({ recipeList }) => {
 
   return (
     <div className="frigo">
-      <Filter_frigo />
+      <Filter_frigo recipeList={recipeList} />
     </div>
   );
 };

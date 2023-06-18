@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import '../styles/Filter_frigo.css';
 import { Link } from 'react-router-dom';
 import { renderDifficulty } from '../utility';
-import { recipeList } from '../datas/recipeList';
 
-const RecipeList = ({ searchIngredients }) => {
+const RecipeList = ({ searchIngredients, recipeList }) => {
   const removeAccents = (str) => {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   };
+
+  if (recipeList === undefined) {
+    return null;
+  }
 
   const filteredRecipes = recipeList.filter(recipe => {
     return recipe.ingredients.some(ingredient =>
@@ -39,7 +42,7 @@ const RecipeList = ({ searchIngredients }) => {
   );
 }
 
-const FrigoPage = () => {
+const FrigoPage = ({ recipeList }) => {
   const [ingredients, setIngredients] = useState('');
 
   const handleInputChange = (event) => {
@@ -64,7 +67,7 @@ const FrigoPage = () => {
           <input type="text" id="ingredient" value={ingredients} onChange={handleInputChange} />
         </label>
       </form>
-      <RecipeList searchIngredients={ingredients.split(',').map(ingredient => ingredient.trim())} />
+      <RecipeList searchIngredients={ingredients.split(',').map(ingredient => ingredient.trim()) } recipeList={recipeList} />
     </div>
   );
 };

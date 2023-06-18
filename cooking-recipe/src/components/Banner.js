@@ -1,19 +1,38 @@
+import { useState } from 'react';
 import logo from '../assets/logo2-sans-fond.png'
 import '../styles/Banner.css'
-import { recipeList } from '../datas/recipeList';
 import { Link } from 'react-router-dom';
 
-function getRandomRecipe() {
-    const randomIndex = Math.floor(Math.random() * recipeList.length);
-    return recipeList[randomIndex];
-  }
 
-function Banner({ children }) {
-    const recipe = getRandomRecipe();
+function Banner({ children, recipeList }) {
+    const [recipeName, setSelectedRecipeName] = useState("")
 
+    if (recipeList === undefined) {
+        return null;
+    }
+
+    const getRandomRecipe = () => {
+        let randomIndex = Math.floor(Math.random() * recipeList.length);
+        if (recipeName) {
+            const lastRandomRecipeIndex = recipeList.findIndex(r => r.name === recipeName)
+            if (randomIndex === lastRandomRecipeIndex) {
+                console.log("Switched recipe to avoid repetition");
+                randomIndex = (randomIndex+1) % recipeList.length; 
+            }
+        }
+        return recipeList[randomIndex];
+    }
+    
     const randomRecipeReload = (event) => {
-        recipe = getRandomRecipe();
+        const recipe = getRandomRecipe();
+        if (recipe !== undefined)
+            setSelectedRecipeName(recipe.name)
+        window.scrollTo(0, 0)
     };
+
+    if (!recipeName) {
+        randomRecipeReload()
+    }
 
     return (
         <div className='banner'>
@@ -21,7 +40,7 @@ function Banner({ children }) {
             <Link to="/plats" className='link'>Plats</Link>
             <Link to="/desserts" className='link'>Desserts</Link>
             <Link to="/frigo" className='link'>Frigo</Link>
-            <Link to={`/recette/${recipe.name}`} className='link' onClick={randomRecipeReload}>Aléatoire</Link>
+            <Link to={`/recette/${recipeName}`} className='link' onClick={randomRecipeReload}>Aléatoire</Link>
             <Link to="/formulaire" className='link'>Ajouter une recette</Link>
             <Link to="/"><img src={logo} alt='TuCuisines' className='logo' /></Link>
             {children}

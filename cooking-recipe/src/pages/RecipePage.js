@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { recipeList } from '../datas/recipeList';
 import '../styles/RecipePage.css';
 import { renderDifficulty } from "../utility"
 
-function RecipePage() {
+function RecipePage({ recipeList }) {
   const { name } = useParams();
-  const recipe = recipeList.find((recipe) => recipe.name === name);
+  const [count, setCount] = useState();
 
-  const [count, setCount] = useState(recipe.portions);
+  if (recipeList === undefined) {
+    return null
+  }
+  const recipe = recipeList.find((recipe) => recipe.name === name);
+  if (count === undefined) {
+    setCount(recipe.portions)
+  }
+
   const handleIncrement = () => {
     setCount(count + 1);
   };

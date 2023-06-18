@@ -1,9 +1,11 @@
 import '../styles/RecipeGalery.css';
-import { recipeList } from '../datas/recipeList';
 import { Link } from 'react-router-dom';
 import { renderDifficulty } from '../utility';
 
-function RecipeGalery({ recipeFilter }) {
+function RecipeGalery({ recipeFilter, recipeList }) {
+  if (recipeList === undefined) {
+    return null;
+  }
   const filteredRecipes = recipeFilter === undefined ? recipeList : recipeList.filter(recipeFilter);
 
   return (
