@@ -46,7 +46,7 @@ app.get("/", async (req, res) => {
   try {
     fileData = fs.readFileSync(filePath, 'utf-8');
   } catch (error) {
-    console.log('Error reading JSON file:');
+    console.log('Error reading JSON file:', error);
     res.status(500).send('Error reading JSON file: ');
     return;
   }
