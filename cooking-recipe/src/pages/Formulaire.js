@@ -105,8 +105,8 @@ function Formulaire({recipeListSetter}) {
     // Réinitialiser les valeurs des champs après la soumission
     setName('');
     setPicture('');
-    setPreparationTime();
-    setCookTime();
+    setPreparationTime('');
+    setCookTime('');
     setDifficulty('');
     setIngredients([]);
     setQuantity([]);
