@@ -64,6 +64,11 @@ function Formulaire({recipeListSetter}) {
   };
 
   const handleSubmit = () => {
+    if (!name || !preparationTime || !cookTime || !difficulty || ingredients.length === 0 || !category || instructions.length === 0) {
+      alert("Veuillez remplir tous les champs obligatoires !");
+      return;
+    }
+
     alert(
       "Votre recette a bien été enregistrée !"   
     );
