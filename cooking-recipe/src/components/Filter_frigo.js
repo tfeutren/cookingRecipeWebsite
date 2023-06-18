@@ -57,7 +57,7 @@ const FrigoPage = ({ recipeList }) => {
 
   return (
     <div>
-      Sélectionnez les ingrédients que vous avez dans vos placards ou dans votre frigo :
+      Indiquez les ingrédients que vous avez dans vos placards ou dans votre frigo pour trouver des recettes que vous pourriez faire :
       <br/>
       <strong>Merci de taper les ingrédients séparés par des virgules</strong>
       <br/>
