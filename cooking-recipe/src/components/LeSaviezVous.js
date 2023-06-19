@@ -13,7 +13,7 @@ function LeSaviezVous() {
   return (
     <div className='LeSaviezVous'>
       <h2>Le saviez-vous</h2>
-      <p className='aligne-title'> <strong>{question.question} </strong>  </p>
+      <p className='aligne'> <strong>{question.question} </strong>  </p>
       <p className='aligne'>{question.answer}</p>
     </div>
   );
