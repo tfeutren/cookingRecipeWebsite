@@ -54,7 +54,7 @@ const FrigoPage = ({ recipeList }) => {
     const inputIngredients = ingredients.split(',').map(ingredient => ingredient.trim());
     setIngredients(inputIngredients.join(', '));
   };
-
+  
   return (
     <div>
       Indiquez les ingrédients que vous avez dans vos placards ou dans votre frigo pour trouver des recettes que vous pourriez faire :

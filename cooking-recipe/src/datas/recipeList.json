@@ -398,5 +398,57 @@
     ],
     "portions": 2,
     "description": "Excellent"
+  },
+  {
+    "name": "Gâteau basque",
+    "picture": "https://lacerisesurlemaillot.fr/wp-content/uploads/2022/02/cheesecake-basque-1920x1920.jpg",
+    "preparationTime": 10,
+    "cookTime": 25,
+    "difficulty": "1",
+    "ingredients": [
+      {
+        "name": "Saint-Môret",
+        "quantity": 300,
+        "unit": "g"
+      },
+      {
+        "name": "œuf",
+        "quantity": 3,
+        "unit": "œufs"
+      },
+      {
+        "name": "crème liquide entière",
+        "quantity": 15,
+        "unit": "cl"
+      },
+      {
+        "name": "sucre",
+        "quantity": 90,
+        "unit": "g"
+      },
+      {
+        "name": "farine",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "name": "jus de citron",
+        "quantity": 20,
+        "unit": "g"
+      }
+    ],
+    "quantity": [],
+    "unit": [],
+    "category": "dessert",
+    "instructions": [
+      "Préchauffer le four à 230° à chaleur tournante",
+      "Mixer tous les ingrédients ensemble",
+      "Les verser dans le moule",
+      "Enfourner pendant 25 minutes",
+      "Laisser refroidir 1h à température ambiante puis minimum 2h au réfrigérateur avant de retirer le papier sulfurisé et de déguster"
+    ],
+    "type": "",
+    "portions": 6,
+    "description": "Le dessert venu du Pays Basque qui fait le tour du monde"
   }
 ]
